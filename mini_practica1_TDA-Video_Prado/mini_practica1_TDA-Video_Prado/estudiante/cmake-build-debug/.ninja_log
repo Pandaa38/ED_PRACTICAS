@@ -1,0 +1,7 @@
+# ninja log v6
+6	958	1728577007060912728	CMakeFiles/image.dir/src/image.cpp.o	7c9b4170fce71d6
+8	962	1728577007062912723	CMakeFiles/image.dir/src/imageIO.cpp.o	784e9b6cad35821
+962	992	1728577008016910234	libimage.a	45a8acbdd5adfd8d
+9	1737	1728577007063912720	CMakeFiles/morphing.dir/src/morphing.cpp.o	d014af57d7b8bf0f
+959	2405	1728577008013910241	CMakeFiles/morphing.dir/src/video.cpp.o	9aa55d88b3bbd6a2
+2405	2539	1728577009459906658	bin/morphing	a59ac241f99aa693

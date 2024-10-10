@@ -1,6 +1,7 @@
 
 #include "video.h"
-//COMPLETAR POR EL ESTUDIANTE
+
+#include <fstream>
 
 void read_directory(const std::string& name, vector<string>& v)
 {
@@ -14,71 +15,113 @@ void read_directory(const std::string& name, vector<string>& v)
     closedir(dirp);
 }
 
-
+// Constructor por defecto
 Video::Video(){
-    //COMPLETAR POR EL ESTUDIANTE
+    seq.clear();
 }
-/**************************************************/
+/*******************Constructor por defecto**************/
 Video::Video(int n){
-//COMPLETAR POR EL ESTUDIANTE
+    seq.reserve(n);
 }
 /**************************************************/
 Video::Video(const Video &V){
-//COMPLETAR POR EL ESTUDIANTE
-
+    seq = V.seq;
 }
 /**************************************************/
 Video::~Video(){}
 /**************************************************/
 Video &Video::operator=(const Video &V){
-//COMPLETAR POR EL ESTUDIANTE
+    seq = V.seq;
+    return *this;
 }
 /**************************************************/
 int Video::size() const{
-    //COMPLETAR POR EL ESTUDIANTE
+    return seq.size();
 }
 /**************************************************/
 Image &Video::operator[](int foto){
-    //COMPLETAR POR EL ESTUDIANTE
+    return seq[foto];
 }
 
 const Image &Video::operator[](int foto)const{
-    //COMPLETAR POR EL ESTUDIANTE
+    return seq[foto];
 }
 
 void Video::Insertar(int k, const Image &I){
-    //COMPLETAR POR EL ESTUDIANTE
-
+    seq.resize(size()+1);
+    for (int i = k; i < seq.size(); i++) {
+        seq[i+1] = seq[i]; // Desplazamos hacia la derecha todos los elementos
+    }
+    seq[k] = I; // Agregamos el nuevo fotograma
 }
 
 void Video::Borrar(int k){
-    //COMPLETAR POR EL ESTUDIANTE
+    for (int i = k; i < seq.size(); i++) {
+        seq[i] = seq[i+1]; // Desplazamos hacia la izquierda todos los elementos
+    }
+    seq.resize(size()-1);
 }
 
-bool Video::LeerVideo(const string &path){
+bool Video::LeerVideo(const std::string &path) {
+    bool exito = true;
+    std::vector<std::string> seqStrings;     // Vector para almacenar los nombres de las imágenes
 
-    //USA read_directory PARA LEER los fichero de un directorio
-    //COMPLETAR POR EL ESTUDIANTE
-}
+    // Llama a read_directory para llenar seqStrings
+    read_directory(path, seqStrings);
 
-bool Video::EscribirVideo(const string & path, const string &prefijo)const{
-
-    bool exito=true;
-    std::filesystem::path filepath =path;
-    bool filepathExists = std::filesystem::is_directory(filepath);
-
-    if (!filepathExists){
-
-        bool created_new_directory= std::filesystem::create_directory(filepath);
-        if (!created_new_directory){
-            cout<<"No se puede crear el directorio "<<path<<endl;
-            return false;
-        }
-        else{
-            cout<<" Se ha creado el directorio "<< path<<endl;
+    if (seqStrings.empty()) {   // Si no se ha leído nada, la secuencia estará vacía
+        exito = false;
+    } else {
+        // Carga las imágenes utilizando los nombres de archivo
+        seq.clear();  // Limpia la secuencia actual antes de cargar nuevas imágenes
+        for (size_t i = 0; i < seqStrings.size(); ++i) {
+            Image img((path + "/" + seqStrings[i]).c_str());
+            if (!img.Empty()) {
+                seq.push_back(img);
+            } else {
+                std::cerr << "Error al cargar la imagen: " << seqStrings[i] << std::endl;
+                exito = false; // Marca como fallido si alguna imagen no se carga
+            }
         }
     }
 
-    //COMPLETAR POR EL ESTUDIANTE
+    return exito;
+}
 
+bool Video::EscribirVideo(const std::string &path, const std::string &prefijo) const {
+    bool exito = true;
+    std::filesystem::path filepath = path;
+    bool filepathExists = std::filesystem::is_directory(filepath);
+
+    // Verifica si el directorio existe, si no, lo crea
+    if (!filepathExists) {
+        bool created_new_directory = std::filesystem::create_directory(filepath);
+        if (!created_new_directory) {
+            std::cout << "No se puede crear el directorio " << path << std::endl;
+            return false;
+        } else {
+            std::cout << "Se ha creado el directorio " << path << std::endl;
+        }
+    }
+
+    // Recorre la secuencia de fotogramas para escribir cada uno en un archivo
+    for (size_t i = 0; i < seq.size(); i++) {
+        std::ostringstream filename;
+        filename << path << "/" << prefijo << "_" << std::setw(2) << std::setfill('0') << (i + 1) << ".pgm";
+
+        int rows = seq[i].get_rows();
+        int cols = seq[i].get_cols();
+        std::vector<unsigned char> imgData(rows * cols); // Crear un vector para almacenar todos los píxeles
+
+        // Copia los datos de la imagen a imgData
+        for (int f = 0; f < rows; f++) {
+            for (int c = 0; c < cols; c++) {
+                imgData[f * cols + c] = seq[i].get_pixel(f, c); // Accede a cada píxel
+            }
+        }
+
+        // Escribir cada imagen en el archivo correspondiente
+        exito = WritePGMImage(filename.str().c_str(), imgData.data(), rows, cols);
+    }
+    return exito;
 }
