@@ -1,7 +1,7 @@
+#include <iomanip>
+#include <fstream>
 
 #include "video.h"
-
-#include <fstream>
 
 void read_directory(const std::string& name, vector<string>& v)
 {

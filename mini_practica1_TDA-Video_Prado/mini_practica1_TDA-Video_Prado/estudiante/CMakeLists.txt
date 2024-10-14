@@ -56,6 +56,3 @@ add_custom_target(mrproper
             COMMAND ${CMAKE_COMMAND} -E remove_directory "quienesquien_autogen"
             WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}
 )            
-
-
-

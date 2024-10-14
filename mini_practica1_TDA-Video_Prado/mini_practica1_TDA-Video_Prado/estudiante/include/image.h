@@ -166,6 +166,22 @@ public :
     Image & operator= (const Image & orig);
 
     /**
+    * @brief Sobrecarga del operador de multiplicación.
+    * @param escalar Escalar por el que se multiplica el fotograma
+    * @return objeto imagen modificado resultado de la multiplicación.
+    * @post Destroy cualquier información que contuviera previamente la imagen que llama al operador de asignación.
+    */
+    Image operator*(float escalar) const;
+
+    /**
+    * @brief Sobrecarga del operador de suma.
+    * @param scalar Escalar por el que se multiplica el fotograma
+    * @return Objeto imagen resultado de la suma.
+    * @post Destroy cualquier información que contuviera previamente la imagen que llama al operador de asignación.
+    */
+    Image operator+(const Image& other) const;
+
+    /**
       * @brief Funcion para conocer si una imagen está vacía.
       * @return Si la imagene está vacía
       * @post la imagen no se modifica.

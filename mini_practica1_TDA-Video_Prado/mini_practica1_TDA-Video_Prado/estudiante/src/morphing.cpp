@@ -1,7 +1,10 @@
+#include <cstring>
+#include <iostream>
+#include <fstream>
+#include <filesystem>
 #include "image.h"
 #include "video.h"
-#include <iostream>
-#include <cassert>
+
 using namespace std;
 
 void showEnglishHelp(ostream& outputStream) {
@@ -16,7 +19,7 @@ void showEnglishHelp(ostream& outputStream) {
 Video Morphing(const Image &I1,const Image &I2,int nframes){
  Video morph;
  for (int i=0;i<nframes;i++) {
-  morph[i] = I1 * (1-i/nframes) + (I2*(1-i/nframes));
+  morph[i] = (I1 * (1-i/nframes) + I2*(i/nframes));
  }
  return morph;
 }
@@ -36,8 +39,8 @@ int main(int argc, char * argv[]){
   return 1;
  }
 
- std::filesystem::path filepath_in1 = argv[1];
- std::filesystem::path filepath_in2 = argv[2];
+ const char* filepath_in1 = argv[1];
+ const char* filepath_in2 = argv[2];
  int nframes = atoi(argv[3]);
 
  // Comprobamos si los directorios en los que se encunetran las
@@ -51,8 +54,9 @@ int main(int argc, char * argv[]){
  }
 
  //Cargamos las imagenes del primer y segundo fichero
- Image I1(filepath_in1);
- Image I2(filepath_in2);
+ Image I1, I2;
+ I1.Load(filepath_in1);
+ I2.Load(filepath_in2);
 
  Video video_morph = Morphing(I1,I2,nframes);
 

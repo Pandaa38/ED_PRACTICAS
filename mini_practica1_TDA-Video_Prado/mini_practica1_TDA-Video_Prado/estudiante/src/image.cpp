@@ -131,6 +131,32 @@ Image & Image::operator= (const Image & orig){
     }
     return *this;
 }
+// Operador de multiplicación por un escalar
+Image Image::operator*(float scalar) const {
+    Image result(*this);
+    for (int y = 0; y < get_rows(); ++y) {
+        for (int x = 0; x < get_cols(); ++x) {
+            pixel aux = static_cast<int>(get_pixel(y,x) * scalar);
+            result.set_pixel(y,x,aux);
+        }
+    }
+    return result;
+}
+
+// Operador de suma para combinar dos imágenes
+Image Image::operator+(const Image& other) const {
+    Image result(*this);
+    // Asumiendo que ambas imágenes tienen el mismo tamaño
+    for (int row = 0; row < get_rows(); ++row) {
+        for (int col = 0; col < get_cols(); ++col) {
+            // Combinar los píxeles de ambas imágenes
+            // Asegúrate de que el rango de valores esté correcto (ejemplo: 0-255 para píxeles RGB)
+            pixel aux = static_cast<int>(get_pixel(row, col) + other.get_pixel(row, col));
+            result.set_pixel(row,col,aux);
+        }
+    }
+    return result;
+}
 
 // Métodos de acceso a los campos de la clase
 

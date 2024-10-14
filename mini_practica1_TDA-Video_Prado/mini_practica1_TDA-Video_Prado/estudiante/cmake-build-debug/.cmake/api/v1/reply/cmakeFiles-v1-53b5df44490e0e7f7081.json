@@ -21,6 +21,11 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
+			"path" : "/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeUnixFindMake.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
 			"path" : "/snap/clion/296/bin/cmake/linux/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake"
 		},
 		{
@@ -796,8 +801,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug",
-		"source" : "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante"
+		"build" : "/home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug",
+		"source" : "/home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante"
 	},
 	"version" : 
 	{
