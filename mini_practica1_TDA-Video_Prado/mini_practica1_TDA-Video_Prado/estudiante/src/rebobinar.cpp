@@ -38,7 +38,7 @@ Video Rebobinar(const Video &V){
 
 int main(int argc, char * argv[]){
 
-    const string PREFIJO = "VIDEO";
+    const string PREFIJO = "REBOBINAR";
 
     //argv[0] = programa
     //argv[1] = fotogramas video de entrada
