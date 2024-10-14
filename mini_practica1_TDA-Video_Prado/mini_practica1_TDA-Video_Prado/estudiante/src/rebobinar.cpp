@@ -38,7 +38,7 @@ Video Rebobinar(const Video &V){
 
 int main(int argc, char * argv[]){
 
-    const string PREFIJO = "PREFIJO";
+    const string PREFIJO = "VIDEO";
 
     //argv[0] = programa
     //argv[1] = fotogramas video de entrada
@@ -61,14 +61,12 @@ int main(int argc, char * argv[]){
     //usar EscribirVideo => path salida
 
     Video video_raw;
+    bool read_ok = video_raw.LeerVideo(argv[1]);
 
-    // bool video_raw.LeerVideo(argv[1]);
+    if(read_ok) {
+        Video video_back = Rebobinar(video_raw);
 
-    Video video = Rebobinar(video_raw);
-
-    video.EscribirVideo(argv[2], PREFIJO);
-
-
-
+        video_back.EscribirVideo(argv[2], PREFIJO);
+    }
     return 0;
 }
