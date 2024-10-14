@@ -88,7 +88,7 @@ bool Video::LeerVideo(const std::string &path) {
     return exito;
 }
 
-bool Video::EscribirVideo(const std::string &path, const std::string &prefijo) const {
+bool Video::EscribirVideo(const std::string &path, const std::string &prefijo ) const {
     bool exito = true;
     std::filesystem::path filepath = path;
     bool filepathExists = std::filesystem::is_directory(filepath);

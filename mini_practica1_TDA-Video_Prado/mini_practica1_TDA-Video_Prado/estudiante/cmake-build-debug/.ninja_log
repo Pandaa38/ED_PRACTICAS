@@ -5,3 +5,6 @@
 9	1737	1728577007063912720	CMakeFiles/morphing.dir/src/morphing.cpp.o	d014af57d7b8bf0f
 959	2405	1728577008013910241	CMakeFiles/morphing.dir/src/video.cpp.o	9aa55d88b3bbd6a2
 2405	2539	1728577009459906658	bin/morphing	a59ac241f99aa693
+8	2102	1728900439152069437	CMakeFiles/rebobinar.dir/src/rebobinar.cpp.o	421347b4eca5b87f
+9	2399	1728900439153069444	CMakeFiles/rebobinar.dir/src/video.cpp.o	97110baa934a38c3
+2399	2574	1728900441543085162	bin/rebobinar	8ab6d2951dd27807
