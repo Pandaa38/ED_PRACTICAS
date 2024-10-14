@@ -1,10 +1,10 @@
 # TDA_VIDEO
 
 ## Documentación hecha:
-		video.h  
+		video.h  (maria)
 
 ## Implementación hecha:
-		video.cpp  
+		video.cpp  (maria)
 		
 ## Documentacion por hacer:
 		
