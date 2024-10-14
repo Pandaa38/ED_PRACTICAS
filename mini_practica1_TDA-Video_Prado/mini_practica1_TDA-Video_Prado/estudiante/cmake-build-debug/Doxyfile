@@ -1,6 +1,6 @@
 PROJECT_NAME           = "Práctica 1. Imágenes"
-OUTPUT_DIRECTORY       = /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/doc_doxygen/
-INPUT                  = /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/.//include /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/.//src /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/.//doc
+OUTPUT_DIRECTORY       = /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/doc_doxygen/
+INPUT                  = /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/.//include /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/.//src /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/.//doc
 GENERATE_LATEX         = NO
-IMAGE_PATH             = /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/.//doc
+IMAGE_PATH             = /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/.//doc
 EXTRACT_PRIVATE        = NO

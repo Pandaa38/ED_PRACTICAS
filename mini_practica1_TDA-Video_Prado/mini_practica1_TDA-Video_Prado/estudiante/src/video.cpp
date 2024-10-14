@@ -9,7 +9,13 @@ void read_directory(const std::string& name, vector<string>& v)
     struct dirent * dp;
     while ((dp = readdir(dirp)) != NULL) {
 
-        v.push_back(dp->d_name);
+        //modificacion no se si peudo tocar esta parte del codigo
+        std::string file_name(dp->d_name);
+        if (file_name != "." && file_name != "..") {
+            v.push_back(file_name);
+        }
+
+        //v.push_back(dp->d_name);
 
     }
     closedir(dirp);
@@ -29,9 +35,12 @@ Video::Video(const Video &V){
 }
 /**************************************************/
 Video::~Video(){}
-/**************************************************/
+
+//**************************************************/
 Video &Video::operator=(const Video &V){
-    seq = V.seq;
+    if (this != &V) { //si no son el mismo objeto
+        seq = V.seq;
+    }
     return *this;
 }
 /**************************************************/
@@ -46,20 +55,22 @@ Image &Video::operator[](int foto){
 const Image &Video::operator[](int foto)const{
     return seq[foto];
 }
-
+//mal seq[i+1]
 void Video::Insertar(int k, const Image &I){
     seq.resize(size()+1);
-    for (int i = k; i < seq.size(); i++) {
-        seq[i+1] = seq[i]; // Desplazamos hacia la derecha todos los elementos
+    for (int i = size() - 1; i > k; --i) {
+        seq[i] = seq[i - 1]; // Desplazamos hacia la derecha
     }
     seq[k] = I; // Agregamos el nuevo fotograma
 }
-
+//mal seq[i+1]
 void Video::Borrar(int k){
-    for (int i = k; i < seq.size(); i++) {
-        seq[i] = seq[i+1]; // Desplazamos hacia la izquierda todos los elementos
+    if (k >= 0 && k < size()) {
+        for (int i = k; i < size() - 1; i++) {
+            seq[i] = seq[i + 1]; // Desplazamos hacia la izquierda
+        }
+        seq.resize(size() - 1); // Ajustamos el tamaño
     }
-    seq.resize(size()-1);
 }
 
 bool Video::LeerVideo(const std::string &path) {
@@ -74,14 +85,20 @@ bool Video::LeerVideo(const std::string &path) {
     } else {
         // Carga las imágenes utilizando los nombres de archivo
         seq.clear();  // Limpia la secuencia actual antes de cargar nuevas imágenes
-        for (size_t i = 0; i < seqStrings.size(); ++i) {
-            Image img((path + "/" + seqStrings[i]).c_str());
+        for (size_t i = 0; i < seqStrings.size(); i++) {
+
+            //otra posible sol es filtrar aqui el dir actual y dir padre (. y ..)
+            cout << seqStrings[i].c_str() << endl;
+
+            Image img((path + seqStrings[i]).c_str());
+
             if (!img.Empty()) {
                 seq.push_back(img);
             } else {
                 std::cerr << "Error al cargar la imagen: " << seqStrings[i] << std::endl;
                 exito = false; // Marca como fallido si alguna imagen no se carga
             }
+
         }
     }
 
@@ -107,7 +124,7 @@ bool Video::EscribirVideo(const std::string &path, const std::string &prefijo ) 
     // Recorre la secuencia de fotogramas para escribir cada uno en un archivo
     for (size_t i = 0; i < seq.size(); i++) {
         std::ostringstream filename;
-        filename << path << "/" << prefijo << "_" << std::setw(2) << std::setfill('0') << (i + 1) << ".pgm";
+        filename << path << "/" << prefijo << "_" << std::setw(2) << std::setfill('0') << (i) << ".pgm"; //i+1
 
         int rows = seq[i].get_rows();
         int cols = seq[i].get_cols();

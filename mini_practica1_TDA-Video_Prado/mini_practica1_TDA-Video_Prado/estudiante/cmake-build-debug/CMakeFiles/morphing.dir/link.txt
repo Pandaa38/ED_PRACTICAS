@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/morphing.dir/src/morphing.cpp.o CMakeFiles/morphing.dir/src/video.cpp.o -o bin/morphing  libimage.a

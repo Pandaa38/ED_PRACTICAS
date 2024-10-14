@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/rebobinar.dir/src/rebobinar.cpp.o CMakeFiles/rebobinar.dir/src/video.cpp.o -o bin/rebobinar  libimage.a
