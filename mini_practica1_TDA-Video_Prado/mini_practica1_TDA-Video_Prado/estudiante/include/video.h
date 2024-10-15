@@ -11,11 +11,13 @@
 #include <fstream>
 #include <string>
 using namespace std;
-
-//Lee los ficheros de un directorio
-//name es el nombre del directorio
-//v el vector donde almacena los nombres
-
+/**
+* @brief Lee los ficheros de un directorio
+* @param name es el nombre del directorio
+* @param v el vector donde almacena los nombres
+* @post Genera una instancia de la clase Vídeo con O imágenes.
+* @return Vídeo, el objeto vídeo creado.
+*/
 void read_directory(const std::string& name, vector<string>& v);
 
 

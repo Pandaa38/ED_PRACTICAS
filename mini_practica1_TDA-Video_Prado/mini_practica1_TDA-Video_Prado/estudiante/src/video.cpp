@@ -1,22 +1,16 @@
 #include <iomanip>
 #include <fstream>
+#include <algorithm>
 
 #include "video.h"
 
 void read_directory(const std::string& name, vector<string>& v)
 {
     DIR* dirp = opendir(name.c_str());
-    struct dirent * dp;
-    while ((dp = readdir(dirp)) != NULL) {
 
-        //modificacion no se si peudo tocar esta parte del codigo
+    struct dirent* dp;
+    while ((dp = readdir(dirp)) != nullptr) {
         std::string file_name(dp->d_name);
-        if (file_name != "." && file_name != "..") {
-            v.push_back(file_name);
-        }
-
-        //v.push_back(dp->d_name);
-
     }
     closedir(dirp);
 }
@@ -27,7 +21,7 @@ Video::Video(){
 }
 /*******************Constructor por defecto**************/
 Video::Video(int n){
-    seq.reserve(n);
+    seq.resize(n);
 }
 /**************************************************/
 Video::Video(const Video &V){
@@ -35,12 +29,9 @@ Video::Video(const Video &V){
 }
 /**************************************************/
 Video::~Video(){}
-
-//**************************************************/
+/**************************************************/
 Video &Video::operator=(const Video &V){
-    if (this != &V) { //si no son el mismo objeto
-        seq = V.seq;
-    }
+    seq = V.seq;
     return *this;
 }
 /**************************************************/
@@ -48,29 +39,27 @@ int Video::size() const{
     return seq.size();
 }
 /**************************************************/
-Image &Video::operator[](int foto){
-    return seq[foto];
+Image &Video::operator[](int foto) {
+    return seq.at(foto);
 }
 
 const Image &Video::operator[](int foto)const{
     return seq[foto];
 }
-//mal seq[i+1]
+
 void Video::Insertar(int k, const Image &I){
     seq.resize(size()+1);
-    for (int i = size() - 1; i > k; --i) {
-        seq[i] = seq[i - 1]; // Desplazamos hacia la derecha
+    for (int i = k; i < seq.size(); i++) {
+        seq[i+1] = seq[i]; // Desplazamos hacia la derecha todos los elementos
     }
     seq[k] = I; // Agregamos el nuevo fotograma
 }
-//mal seq[i+1]
+
 void Video::Borrar(int k){
-    if (k >= 0 && k < size()) {
-        for (int i = k; i < size() - 1; i++) {
-            seq[i] = seq[i + 1]; // Desplazamos hacia la izquierda
-        }
-        seq.resize(size() - 1); // Ajustamos el tamaño
+    for (int i = k; i < seq.size(); i++) {
+        seq[i] = seq[i+1]; // Desplazamos hacia la izquierda todos los elementos
     }
+    seq.resize(size()-1);
 }
 
 bool Video::LeerVideo(const std::string &path) {
@@ -79,18 +68,14 @@ bool Video::LeerVideo(const std::string &path) {
 
     // Llama a read_directory para llenar seqStrings
     read_directory(path, seqStrings);
-
+    sort(seqStrings.begin(), seqStrings.end());
     if (seqStrings.empty()) {   // Si no se ha leído nada, la secuencia estará vacía
         exito = false;
     } else {
         // Carga las imágenes utilizando los nombres de archivo
         seq.clear();  // Limpia la secuencia actual antes de cargar nuevas imágenes
-        for (size_t i = 0; i < seqStrings.size(); i++) {
-
-            //otra posible sol es filtrar aqui el dir actual y dir padre (. y ..)
-            cout << seqStrings[i].c_str() << endl;
-
-            Image img((path + seqStrings[i]).c_str());
+        for (size_t i = 0; i < seqStrings.size(); ++i) {
+            Image img((path + "/" + seqStrings[i]).c_str());
 
             if (!img.Empty()) {
                 seq.push_back(img);
@@ -98,10 +83,8 @@ bool Video::LeerVideo(const std::string &path) {
                 std::cerr << "Error al cargar la imagen: " << seqStrings[i] << std::endl;
                 exito = false; // Marca como fallido si alguna imagen no se carga
             }
-
         }
     }
-
     return exito;
 }
 
@@ -120,11 +103,10 @@ bool Video::EscribirVideo(const std::string &path, const std::string &prefijo ) 
             std::cout << "Se ha creado el directorio " << path << std::endl;
         }
     }
-
     // Recorre la secuencia de fotogramas para escribir cada uno en un archivo
-    for (size_t i = 0; i < seq.size(); i++) {
+    for (int i = 0; i < seq.size(); i++) {
         std::ostringstream filename;
-        filename << path << "/" << prefijo << "_" << std::setw(2) << std::setfill('0') << (i) << ".pgm"; //i+1
+        filename << path << "/" << prefijo << "_" << std::setw(2) << std::setfill('0') << (i + 1) << ".pgm";
 
         int rows = seq[i].get_rows();
         int cols = seq[i].get_cols();
