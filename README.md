@@ -1,15 +1,17 @@
 # TDA_VIDEO
 
 ## Documentación hecha:
-		video.h  (maria)
+		video.h
 
 ## Implementación hecha:
-		video.cpp  (maria)
-		
-## Documentacion por hacer:
-		
-		
-## Implementacion por hacer:
+		video.cpp
 		morphing.cpp
 		rebobinar.cpp
+
+		
+## Documentacion por hacer:
+		TODO!!!
+		
+## Implementacion por hacer:
+		
 

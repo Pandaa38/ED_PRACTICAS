@@ -48,7 +48,7 @@ Video Rebobinar(Video V){
         V[i] = V[(tam-1)-i];
         V[(tam-1)-i] = temp;
     }
-    cout << "hola, aprende a programr " << endl;
+    //cout << "hola, aprende a programr " << endl;
 
     return V;
 }
@@ -78,17 +78,17 @@ int main(int argc, char * argv[]){
     //usar EscribirVideo => path salida
 
     Video video_raw;
-    cout << "se crea video constructor bien" << endl;
+    //cout << "se crea video constructor bien" << endl;
 
     bool read_ok = video_raw.LeerVideo(argv[1]);
-    cout << "read: " << boolalpha << read_ok << endl;
+    //cout << "read: " << boolalpha << read_ok << endl;
 
     if(read_ok) {
         Video video_back = Rebobinar(video_raw);
-        cout << "rebobinar no aborta" << endl;
+        //cout << "rebobinar no aborta" << endl;
 
         bool write_ok = video_back.EscribirVideo(argv[2], PREFIJO);
-        cout << boolalpha << write_ok << " write" << endl;
+        //cout << boolalpha << write_ok << " write" << endl;
     }
     return 0;
 }

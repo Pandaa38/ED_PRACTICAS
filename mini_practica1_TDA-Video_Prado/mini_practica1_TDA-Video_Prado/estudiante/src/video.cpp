@@ -75,9 +75,11 @@ bool Video::LeerVideo(const std::string &path) {
     // Llama a read_directory para llenar seqStrings
     read_directory(path, seqStrings);
     sort(seqStrings.begin(), seqStrings.end());
+    /*
     for (size_t i = 2; i < seqStrings.size(); i++) {
         cout << seqStrings[i] << endl;
     }
+    */
 
 
     if (seqStrings.empty()) {   // Si no se ha leído nada, la secuencia estará vacía
