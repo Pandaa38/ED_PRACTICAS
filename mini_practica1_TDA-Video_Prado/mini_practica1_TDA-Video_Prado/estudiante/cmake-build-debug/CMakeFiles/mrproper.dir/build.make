@@ -53,10 +53,10 @@ RM = /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante
+CMAKE_SOURCE_DIR = /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug
+CMAKE_BINARY_DIR = /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug
 
 # Utility rule file for mrproper.
 
@@ -67,16 +67,16 @@ include CMakeFiles/mrproper.dir/compiler_depend.make
 include CMakeFiles/mrproper.dir/progress.make
 
 CMakeFiles/mrproper:
-	cd /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E remove_directory /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/zip
-	cd /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E remove_directory /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/bin
-	cd /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E remove_directory CMakeFiles
-	cd /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E remove CMakeCache.txt
-	cd /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E remove CMakeDoxyfile.in
-	cd /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E remove CMakeDoxygenDefaults.cmake
-	cd /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E remove libimage.a
-	cd /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E remove cmake_install.cmake
-	cd /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E remove_directory doc_doxygen
-	cd /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E remove_directory quienesquien_autogen
+	cd /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E remove_directory /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/zip
+	cd /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E remove_directory /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/bin
+	cd /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E remove_directory CMakeFiles
+	cd /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E remove CMakeCache.txt
+	cd /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E remove CMakeDoxyfile.in
+	cd /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E remove CMakeDoxygenDefaults.cmake
+	cd /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E remove libimage.a
+	cd /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E remove cmake_install.cmake
+	cd /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E remove_directory doc_doxygen
+	cd /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante && /snap/clion/296/bin/cmake/linux/x64/bin/cmake -E remove_directory quienesquien_autogen
 
 mrproper: CMakeFiles/mrproper
 mrproper: CMakeFiles/mrproper.dir/build.make
@@ -91,6 +91,6 @@ CMakeFiles/mrproper.dir/clean:
 .PHONY : CMakeFiles/mrproper.dir/clean
 
 CMakeFiles/mrproper.dir/depend:
-	cd /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug /home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/CMakeFiles/mrproper.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/CMakeFiles/mrproper.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/mrproper.dir/depend
 

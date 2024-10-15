@@ -13,7 +13,7 @@ void showEnglishHelp(ostream& outputStream) {
     outputStream << "-------------------------" << endl;
     outputStream << endl;
 }
-Video Rebobinar(const Video &V){
+Video Rebobinar(Video V){
 /*
     int first = 0;
     int last = V.size();
@@ -27,13 +27,30 @@ Video Rebobinar(const Video &V){
     }
 */
 /*************************************/
+/*
     int tam = V.size();
-    Video Rebobinar(tam);
+    Video rebobinado(tam);
 
+    //error aqui nose por que
+    //acede posiciones incorrectas creo
     for(int i = 0; i < tam; i++) {
-        Rebobinar[i] = V[(tam-1)-i];
+        rebobinado[i] = V[(tam-1)-i]; //si const Video &V => aborta
     }
-    return Rebobinar;
+*/
+    //casi seguro que funciona pero tal vez abria que ordenarlos
+    //incluso si la funcion no hace nada hay errores
+
+    int tam = V.size();
+    //Video rebobinado(V); //una posibilidad es pasar el video V por valor y de esa forma no usar constructor de copia
+    Image temp;
+    for(int i = 0; i < tam/2; i++) {
+        temp = V[i];
+        V[i] = V[(tam-1)-i];
+        V[(tam-1)-i] = temp;
+    }
+    cout << "hola, aprende a programr " << endl;
+
+    return V;
 }
 
 int main(int argc, char * argv[]){
@@ -61,11 +78,17 @@ int main(int argc, char * argv[]){
     //usar EscribirVideo => path salida
 
     Video video_raw;
+    cout << "se crea video constructor bien" << endl;
+
     bool read_ok = video_raw.LeerVideo(argv[1]);
+    cout << "read: " << boolalpha << read_ok << endl;
 
     if(read_ok) {
         Video video_back = Rebobinar(video_raw);
-        video_back.EscribirVideo(argv[2], PREFIJO);
+        cout << "rebobinar no aborta" << endl;
+
+        bool write_ok = video_back.EscribirVideo(argv[2], PREFIJO);
+        cout << boolalpha << write_ok << " write" << endl;
     }
     return 0;
 }

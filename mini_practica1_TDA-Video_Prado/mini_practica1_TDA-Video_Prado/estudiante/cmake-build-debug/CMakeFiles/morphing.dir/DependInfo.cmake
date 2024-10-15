@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/src/morphing.cpp" "CMakeFiles/morphing.dir/src/morphing.cpp.o" "gcc" "CMakeFiles/morphing.dir/src/morphing.cpp.o.d"
-  "/home/maria/Documentos/practicaTDA_VIDEO/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/src/video.cpp" "CMakeFiles/morphing.dir/src/video.cpp.o" "gcc" "CMakeFiles/morphing.dir/src/video.cpp.o.d"
+  "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/src/morphing.cpp" "CMakeFiles/morphing.dir/src/morphing.cpp.o" "gcc" "CMakeFiles/morphing.dir/src/morphing.cpp.o.d"
+  "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/src/video.cpp" "CMakeFiles/morphing.dir/src/video.cpp.o" "gcc" "CMakeFiles/morphing.dir/src/video.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
