@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/./include
+CXX_INCLUDES = -I/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/./include
 
 CXX_FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
 

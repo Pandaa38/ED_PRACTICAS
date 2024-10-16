@@ -1,4 +1,4 @@
-# Install script for directory: /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante
+# Install script for directory: /home/maria/Carrera/Segundo/1cuatri/ED/Practicas/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

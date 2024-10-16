@@ -5,6 +5,14 @@
 #include <iostream>
 using namespace std;
 
+/**
+ * @brief Muestra un mensaje de ayuda en inglés en el flujo de salida especificado.
+ *
+ * Esta función imprime un mensaje de error en caso de que se proporcionen incorrectamente
+ * los parámetros del programa.
+ *
+ * @param outputStream flujo de salida donde se imprimirá el mensaje de ayuda.
+ */
 void showEnglishHelp(ostream& outputStream) {
     outputStream << "-------------------------" << endl;
     outputStream << "ERROR in parameters" << endl;
@@ -13,6 +21,27 @@ void showEnglishHelp(ostream& outputStream) {
     outputStream << "-------------------------" << endl;
     outputStream << endl;
 }
+
+void showEnglishHelp(ostream& outputStream) {
+    outputStream << "-------------------------" << endl;
+    outputStream << "ERROR in parameters" << endl;
+    outputStream << "Run with the following parameters" << endl;
+    outputStream << "Rebobinar /(in directory) /(out directory)" << endl;
+    outputStream << "-------------------------" << endl;
+    outputStream << endl;
+}
+
+/**
+ * @brief Invierte el orden de los fotogramas de un vídeo.
+ *
+ * Esta función recibe un vídeo constante y genera un nuevo vídeo que contiene los fotogramas
+ * en orden inverso.
+ *
+ * @pre Elvídeo de entrada tiene al menos un fotograma.
+ * @param V Un objeto constante de tipo `Video`, que representa el vídeo de entrada.
+ * @return Video Un nuevo objeto de tipo `Video` que contiene los fotogramas en orden inverso.
+ *
+ */
 Video Rebobinar(Video V){
 /*
     int first = 0;

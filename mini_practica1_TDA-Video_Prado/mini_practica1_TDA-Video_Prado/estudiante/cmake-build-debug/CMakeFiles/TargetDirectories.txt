@@ -1,7 +1,7 @@
-/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/CMakeFiles/image.dir
-/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/CMakeFiles/rebobinar.dir
-/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/CMakeFiles/morphing.dir
-/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/CMakeFiles/doc_doxygen.dir
-/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/CMakeFiles/mrproper.dir
-/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/CMakeFiles/image.dir
+/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/CMakeFiles/rebobinar.dir
+/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/CMakeFiles/morphing.dir
+/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/CMakeFiles/doc_doxygen.dir
+/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/CMakeFiles/mrproper.dir
+/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug/CMakeFiles/rebuild_cache.dir

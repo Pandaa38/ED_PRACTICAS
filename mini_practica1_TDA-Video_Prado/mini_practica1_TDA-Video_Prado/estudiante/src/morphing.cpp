@@ -7,6 +7,14 @@
 
 using namespace std;
 
+/**
+ * @brief Muestra un mensaje de ayuda en inglés en el flujo de salida especificado.
+ *
+ * Esta función imprime un mensaje de error en caso de que se proporcionen incorrectamente
+ * los parámetros del programa.
+ *
+ * @param outputStream flujo de salida donde se imprimirá el mensaje de ayuda.
+ */
 void showEnglishHelp(ostream& outputStream) {
     outputStream << "-------------------------" << endl;
     outputStream << "ERROR in parameters" << endl;
@@ -16,6 +24,20 @@ void showEnglishHelp(ostream& outputStream) {
     outputStream << endl;
 }
 
+/**
+ * @brief Realiza un morphing entre dos imágenes, creando una transición suave.
+ *
+ * El morphing es un proceso que transforma una imagen en otra, proporcionando
+ * una transición fluida entre ellas.
+ *
+ * @pre Las imágenes tienen las mismas dimensiones y formatos.
+ * @param I1 La imagen fuente de tipo `Image`, que representa el estado inicial.
+ * @param I2 La imagen destino de tipo `Image`, que representa el estado final.
+ * @param nframes El número de fotogramas a generar durante la transición.
+ * @return Video Un objeto de tipo `Video` que contiene los fotogramas generados
+ *         que representan la transición de I1 a I2.
+ *
+ */
 Video Morphing(const Image &I1, const Image &I2, int nframes) {
     Video morph(nframes);  // Inicializa el vector morph con el tamaño adecuado
     for (int i = 0; i < nframes; i++) {

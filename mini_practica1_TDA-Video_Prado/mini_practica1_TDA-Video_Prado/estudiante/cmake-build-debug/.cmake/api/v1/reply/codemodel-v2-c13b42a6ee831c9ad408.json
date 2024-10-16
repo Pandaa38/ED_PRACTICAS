@@ -54,14 +54,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "image::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-image-Debug-e371cde68adeada86f28.json",
+					"jsonFile" : "target-image-Debug-8858073bf98ad7a0f05f.json",
 					"name" : "image",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "morphing::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-morphing-Debug-b3a21313dbf0b8f7182c.json",
+					"jsonFile" : "target-morphing-Debug-020f0993bd62d7cbf5a0.json",
 					"name" : "morphing",
 					"projectIndex" : 0
 				},
@@ -75,7 +75,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "rebobinar::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-rebobinar-Debug-c0466ba264df919f3390.json",
+					"jsonFile" : "target-rebobinar-Debug-41a2be34c7ab664a62df.json",
 					"name" : "rebobinar",
 					"projectIndex" : 0
 				}
@@ -85,8 +85,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug",
-		"source" : "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante"
+		"build" : "/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/cmake-build-debug",
+		"source" : "/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante"
 	},
 	"version" : 
 	{
