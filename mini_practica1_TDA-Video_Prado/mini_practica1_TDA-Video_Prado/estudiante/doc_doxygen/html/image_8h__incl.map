@@ -1,0 +1,7 @@
+<map id="include/image.h" name="include/image.h">
+<area shape="rect" id="Node000001" title="Fichero de cabecera asociado a la biblioteca libimagen.a." alt="" coords="25,5,152,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,71,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,33,56,69,52,66,78,29"/>
+<area shape="rect" id="Node000003" href="$imageIO_8h.html" title="Fichero cabecera para la E/S de imágenes." alt="" coords="95,79,184,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="99,29,125,66,121,69,95,33"/>
+</map>

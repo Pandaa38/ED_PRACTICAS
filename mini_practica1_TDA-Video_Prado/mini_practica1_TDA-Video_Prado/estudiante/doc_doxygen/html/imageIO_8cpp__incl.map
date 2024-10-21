@@ -1,0 +1,9 @@
+<map id="src/imageIO.cpp" name="src/imageIO.cpp">
+<area shape="rect" id="Node000001" title="Fichero con definiciones para la E/S de imágenes." alt="" coords="70,5,197,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,64,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,33,63,73,60,68,116,29"/>
+<area shape="rect" id="Node000003" href="$imageIO_8h.html" title="Fichero cabecera para la E/S de imágenes." alt="" coords="89,79,178,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="136,31,136,65,131,65,131,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="202,79,275,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="152,28,212,69,209,73,149,33"/>
+</map>

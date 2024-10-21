@@ -19,6 +19,7 @@
   */
 enum ImageKind {IMG_UNKNOWN, IMG_PGM, IMG_PPM};
 
+
 /**
   * @brief Devuelve el tipo de imagen del archivo
   *

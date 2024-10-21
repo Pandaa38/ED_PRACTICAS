@@ -104,6 +104,13 @@ private :
     **/
     void Copy(const Image &orig);
 
+
+    /**
+      @brief Reserva memoria dinámica para un objeto imagen.
+      @param buffer vector dinámico de pixeles
+      @param numero de filas que se reservan
+      @param ncols numero de columnas que se reservan
+    **/
     void Allocate(int nrows, int ncols, pixel * buffer = 0);
 
     /**
@@ -175,7 +182,7 @@ public :
 
     /**
     * @brief Sobrecarga del operador de suma.
-    * @param scalar Escalar por el que se multiplica el fotograma
+    * @param other objeto imagen que actúa como sumando
     * @return Objeto imagen resultado de la suma.
     * @post Destroy cualquier información que contuviera previamente la imagen que llama al operador de asignación.
     */
