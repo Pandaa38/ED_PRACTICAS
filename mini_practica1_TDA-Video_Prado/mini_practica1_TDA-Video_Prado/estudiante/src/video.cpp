@@ -50,7 +50,6 @@ const Image &Video::operator[](int foto)const{
     return seq[foto];
 }
 
-//mal seq[i+1]
 void Video::Insertar(int k, const Image &I){
     seq.resize(size()+1);
     for (int i = size() - 1; i > k; --i) {
@@ -58,7 +57,7 @@ void Video::Insertar(int k, const Image &I){
     }
     seq[k] = I; // Agregamos el nuevo fotograma
 }
-//mal seq[i+1]
+
 void Video::Borrar(int k){
     if (k >= 0 && k < size()) {
         for (int i = k; i < size() - 1; i++) {
