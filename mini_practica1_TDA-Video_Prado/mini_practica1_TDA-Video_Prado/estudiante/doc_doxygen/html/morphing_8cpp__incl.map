@@ -1,0 +1,33 @@
+<map id="src/morphing.cpp" name="src/morphing.cpp">
+<area shape="rect" id="Node000001" title="Fichero con la función morphing." alt="" coords="161,5,295,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="48,79,115,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,33,119,75,116,70,203,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,85,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="216,33,128,106,75,146,71,142,125,102,213,29"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="110,152,183,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="224,32,162,141,158,139,219,30"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="208,152,299,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="233,31,252,138,246,139,227,32"/>
+<area shape="rect" id="Node000006" href="$image_8h.html" title="Fichero de cabecera asociado a la biblioteca libimagen.a." alt="" coords="323,152,397,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="241,29,342,140,338,143,237,33"/>
+<area shape="rect" id="Node000009" href="$video_8h_source.html" title=" " alt="" coords="395,79,466,104"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="261,28,386,72,384,77,260,33"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="277,225,342,251"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="354,179,328,216,323,213,349,176"/>
+<area shape="rect" id="Node000008" href="$imageIO_8h.html" title="Fichero cabecera para la E/S de imágenes." alt="" coords="366,225,455,251"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="371,176,397,213,392,216,366,179"/>
+<area shape="poly" id="edge16_Node000009_Node000003" title=" " alt="" coords="396,101,99,154,99,149,395,96"/>
+<area shape="poly" id="edge17_Node000009_Node000004" title=" " alt="" coords="396,104,197,154,196,148,395,99"/>
+<area shape="poly" id="edge15_Node000009_Node000005" title=" " alt="" coords="403,106,296,149,294,144,401,102"/>
+<area shape="poly" id="edge9_Node000009_Node000006" title=" " alt="" coords="421,106,383,144,379,140,417,102"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="689,152,751,177"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="467,98,676,149,674,154,465,104"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="776,152,872,177"/>
+<area shape="poly" id="edge11_Node000009_Node000011" title=" " alt="" coords="467,96,763,149,762,154,466,101"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="421,152,493,177"/>
+<area shape="poly" id="edge12_Node000009_Node000012" title=" " alt="" coords="438,103,451,138,446,140,433,105"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="518,152,581,177"/>
+<area shape="poly" id="edge13_Node000009_Node000013" title=" " alt="" coords="451,102,519,142,517,147,448,106"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="605,152,664,177"/>
+<area shape="poly" id="edge14_Node000009_Node000014" title=" " alt="" coords="464,102,593,146,592,151,463,107"/>
+</map>

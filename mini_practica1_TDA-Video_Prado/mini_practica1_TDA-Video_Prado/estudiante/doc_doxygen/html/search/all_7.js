@@ -6,9 +6,7 @@ var searchData=
   ['imageio_2ecpp_3',['imageIO.cpp',['../imageIO_8cpp.html',1,'']]],
   ['imageio_2eh_4',['imageIO.h',['../imageIO_8h.html',1,'']]],
   ['imagekind_5',['ImageKind',['../imageIO_8h.html#a18b6324755c82f3edc3da0a37066dc53',1,'imageIO.h']]],
-  ['imagen_6',['Representación del TDA Imagen .',['../repImagen.html',1,'']]],
-  ['información_20sobre_20doxygen_7',['Información sobre Doxygen',['../index.html#autotoc_md0',1,'']]],
-  ['insertar_8',['Insertar',['../classVideo.html#a130653995b45a8b870d1d4696978739d',1,'Video']]],
-  ['introducción_9',['Introducción',['../index.html#autotoc_md1',1,'']]],
-  ['invariante_20de_20la_20representación_10',['invariante de la representación',['../repImagen.html#invImagen',1,'Invariante de la representación.'],['../repVideo.html#invVideo',1,'Invariante de la representación.']]]
+  ['imagen_6',['imagen',['../index.html#autotoc_md0',1,'¿Qué se entiende por imagen?'],['../repImagen.html',1,'Representación del TDA Imagen .']]],
+  ['insertar_7',['Insertar',['../classVideo.html#a130653995b45a8b870d1d4696978739d',1,'Video']]],
+  ['invariante_20de_20la_20representación_8',['invariante de la representación',['../repImagen.html#invImagen',1,'Invariante de la representación.'],['../repVideo.html#invVideo',1,'Invariante de la representación.']]]
 ];

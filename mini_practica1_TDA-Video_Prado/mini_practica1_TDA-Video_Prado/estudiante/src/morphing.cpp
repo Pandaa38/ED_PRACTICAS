@@ -1,3 +1,12 @@
+/**
+ * @file morphing.cpp
+ * @brief Fichero con la función morphing
+ * @details Este archivo contiene la implementación de la función que realiza un morphing entre dos imágenes,
+ *          creando una transición suave entre ellas, así como la función principal del programa.
+ *
+ * @ref Morphing
+ */
+
 #include <cstring>
 #include <iostream>
 #include <fstream>

@@ -4,3 +4,5 @@ INPUT                  = /home/maria/Carrera/Segundo/1cuatri/ED/Practicas/TDA_VI
 GENERATE_LATEX         = NO
 IMAGE_PATH             = /home/maria/Carrera/Segundo/1cuatri/ED/Practicas/TDA_VIDEO/mini_practica1_TDA-Video_Prado/mini_practica1_TDA-Video_Prado/estudiante/.//doc
 EXTRACT_PRIVATE        = NO
+GENERATE_HTML = YES
+

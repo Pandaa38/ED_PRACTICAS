@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Práctica 1. Imágenes: Título de la página principal</title>
+<title>Práctica 1. Imágenes: TDA VÍDEO</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,45 +69,70 @@ $(function() {
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Título de la página principal </div></div>
+  <div class="headertitle"><div class="title">TDA VÍDEO </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><div class="image">
-<img src="doxyque.png" alt=""/>
+<img src="cine-super-8.png" alt=""/>
 <div class="caption">
-Pie de foto</div></div>
+Documentación del TDA Video</div></div>
+<dl class="section user"><dt>Autores:</dt><dd><b>Maria</b> <b>Gallego</b> <b>Siles</b> <br  />
+<b>Juan</b> <b>Reche</b> <b>Aguilar</b> </dd></dl>
 <h1><a class="anchor" id="autotoc_md0"></a>
-Información sobre Doxygen</h1>
-<p>Doxygen admite el uso de la <a href="https://www.markdownguide.org/basic-syntax">sintaxis de Markdown (Consulta aquí los comandos básicos)</a>.</p>
-<p>Así como el uso de <a href="https://htmlcheatsheet.com/">sintaxis <b>HTML</b></a>. Esto es especialmente útil para aquellos aspectos que Markdown no permite modificar, como el <span style="color:red">color</span>. Aunque es buena idea evitarlo en la medida de lo posible, por dos motivos:</p>
-<ol type="1">
-<li><span style="font-size:1.1em">Hace el código <b>poco</b> <span style="  background-image: linear-gradient(to left, #4285f4, #34a853, #fbbc05, #ea4335); -webkit-background-clip: text; color: transparent;"> <b> LEGIBLE </b> </span></span></li>
-<li>La idea detrás de Markdown es separar <em>aspecto</em> y <em>contenido</em>. Y es una <b>gran idea</b>.</li>
-</ol>
-<p>Idealmente el aspecto debería resolverse mediante un documento <code>.css</code> configurado en el archivo <code>Doxyfile.in</code>. Si te interesa, puedes echarle un vistazo a la <a href="https://www.doxygen.nl/manual/customize.html">documentación</a> o a temas customizados como <a href="https://jothepro.github.io/doxygen-awesome-css/">este</a>. Aunque el tema por defecto nos parece perfecto, <em>CLÁSICO</em>. Así puedes centrarte en el contenido.</p>
-<p>Por último, lo hemos visto en clase y hay suficientes ejemplos en el código fuente proporcionado, pero puedes consultar la mayor parte de la sintaxis de Doxygen para comentar código en su <a href="https://www.doxygen.nl/manual/docblocks.html">documentación</a>.</p>
+¿Qué se entiende por imagen?</h1>
+<p>Nuestro TDA Imagen es una matriz bidimensional de puntos (píxeles). Así pues cada pixel tiene asociado un nivel de luminosidad cuyos valores están en el conjunto {0,1, ..., 255} de forma que el 0 indica mínima luminosidad (negro) y el 255 la máxima luminosidad (blanco).</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
-Introducción</h1>
-<p>A RELLENAR POR EL ESTUDIANTE</p>
+¿Qué es el TDA Vídeo?</h1>
+<p>Nuestro TDA <a class="el" href="classVideo.html" title="T.D.A. Vídeo.">Video</a> es un vector dinámico de imágenes que nos permite hacer una serie de operaciones. Así pues nos permite operaciones simples como la creación de un vídeo, consultar sus fotogramas, insertar un nuevo fotograma, almacenar o leer un video en disco..etc. Además de todas estas funcionalidades básicas nos permite:</p><ol type="1">
+<li>Rebobinar un vídeo.</li>
+<li>Realizar morphing sobre un vídeo.</li>
+</ol>
 <h1><a class="anchor" id="autotoc_md2"></a>
 Ejecutables</h1>
-<div class="image">
-<img src="invert.png" alt=""/>
-</div>
- <h2><a class="anchor" id="autotoc_md3"></a>
-Negativo:</h2>
-<p>Calcula el negativo de una imagen</p>
+<ul>
+<li>[image] : Documentación del ejecutable relacionado con la clase <code><a class="el" href="classImage.html" title="T.D.A. Imagen.">Image</a></code>.</li>
+<li>[imageIO] : Documentación del ejecutable relacionado con la clase <code>ImageIO</code>.</li>
+<li>[video] : Documentación del ejecutable relacionado con la clase <code><a class="el" href="classVideo.html" title="T.D.A. Vídeo.">Video</a></code>.</li>
+<li>[morphing] : Documentación del ejecutable relacionado con el proceso de <code>Morphing</code>.</li>
+<li>[rebobinar] : Documentación del ejecutable <code>Rebobinar</code>.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Rebobinar:</h2>
+<p>Lee un vídeo y lo reproduce al revés.</p>
 <blockquote class="doxtable">
-<p>&zwj;<b>negativo</b> &lt;FichImagenOriginal&gt; &lt;FichImagenDestino&gt; </p>
+<p>&zwj;<b>morphing</b> &lt;InputDirectory&gt; &lt;OutputDirectory\ &gt; </p>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">&lt;FichImagenOriginal&gt;</td><td>Imagen PGM a la que se va a calcular </td></tr>
-    <tr><td class="paramname">&lt;FichImagenDestino&gt;</td><td>Imagen PGM resultado de calcular el negativo </td></tr>
+    <tr><td class="paramname">&lt;InputDirectory&gt;</td><td>Directorio donde se encuentra video que se va a rebobinar </td></tr>
+    <tr><td class="paramname">&lt;OutputDirectory&gt;</td><td>Directorio donde se escribirá el resultado de rebobinar el video</td></tr>
   </table>
   </dd>
 </dl>
-</div></div><!-- PageDoc -->
+<div class="image">
+<img src="reverse_skelleton.gif" alt=""/>
+<div class="caption">
+Rebobinar</div></div>
+    <h2><a class="anchor" id="autotoc_md4"></a>
+Morphing:</h2>
+<p>Realiza un morphing entre dos imágenes, creando una transición suave entre ellas.</p>
+<blockquote class="doxtable">
+<p>&zwj;<b>morphing</b> &lt;InputDirectory1&gt; &lt;InputDirectory2&gt;\ &lt;OutputDirectory\ &lt;Nframes&gt; </p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&lt;InputDirectory1&gt;</td><td>Directorio donde se encuentra la primera imagen </td></tr>
+    <tr><td class="paramname">&lt;InputDirectory2&gt;</td><td>Directorio donde se encuentra la segunda imagen </td></tr>
+    <tr><td class="paramname">&lt;OutputDirectory&gt;</td><td>Directorio donde se escribirá el resultado del morphing </td></tr>
+    <tr><td class="paramname">&lt;Nframes&gt;</td><td>Numero de pasos que se darán al realizar el morphing</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="image">
+<img src="output_001.png" alt=""/>
+<div class="caption">
+Morphing</div></div>
+     </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,42 +1,49 @@
 /*! \mainpage TDA VÍDEO
 
-@image html doxyque.png "Pie de foto"
+@image html cine-super-8.png "Documentación del TDA Video"
 
-# Información sobre Doxygen
-Doxygen admite el uso de la [sintaxis de Markdown (Consulta aquí los comandos básicos)](https://www.markdownguide.org/basic-syntax).
+\par Autores:
+\b Maria \b Gallego \b Siles \n
+\b Juan \b Reche \b Aguilar
 
-Así como el uso de  <a href="https://htmlcheatsheet.com/">sintaxis <strong>HTML</strong></a>. Esto es especialmente útil
-para aquellos aspectos que Markdown no permite modificar, como el <span  style="color:red">color</span>. Aunque es buena idea evitarlo en la medida de lo posible, por dos
-motivos:
+# ¿Qué se entiende por imagen?
+Nuestro TDA Imagen es una matriz bidimensional de puntos (píxeles). Así pues cada pixel tiene asociado un nivel de
+luminosidad cuyos valores están en el conjunto {0,1, ..., 255} de forma que el 0 indica mínima luminosidad (negro)
+y el 255 la máxima luminosidad (blanco).
 
-1. <span style="font-size:1.1em">Hace el código <strong>poco</strong> <span style="  background-image: linear-gradient(to left, #4285f4, #34a853, #fbbc05, #ea4335); -webkit-background-clip: text; color: transparent;"> <strong> LEGIBLE </strong> </span></span>
-2. La idea detrás de Markdown es separar _aspecto_ y _contenido_. Y es una __gran idea__.
-
-
-Idealmente el aspecto debería resolverse mediante un documento ``.css`` configurado en el archivo ``Doxyfile.in``.
-Si te interesa, puedes echarle un vistazo a la [documentación](https://www.doxygen.nl/manual/customize.html) o a
-temas customizados como [este](https://jothepro.github.io/doxygen-awesome-css/). Aunque el tema por defecto nos parece
-perfecto, _CLÁSICO_. Así puedes centrarte en el contenido.
-
-Por último, lo hemos visto en clase y hay suficientes ejemplos en el código fuente proporcionado, pero puedes consultar la
-mayor parte de la sintaxis de Doxygen para comentar código en su
-[documentación](https://www.doxygen.nl/manual/docblocks.html).
-
-# Introducción
-
-A RELLENAR POR EL ESTUDIANTE
+# ¿Qué es el TDA Vídeo?
+Nuestro TDA Video es un vector dinámico de imágenes que nos permite hacer una serie de operaciones.
+Así pues nos permite operaciones simples como la creación de un vídeo, consultar sus fotogramas, insertar un nuevo
+fotograma, almacenar o leer un video en disco..etc. Además de todas estas funcionalidades básicas nos permite:
+1. Rebobinar un vídeo.
+2. Realizar morphing sobre un vídeo.
 
 # Ejecutables
+- [\ref image] : Documentación del ejecutable relacionado con la clase `Image`.
+- [\ref imageIO] : Documentación del ejecutable relacionado con la clase `ImageIO`.
+- [\ref video] : Documentación del ejecutable relacionado con la clase `Video`.
+- [\ref morphing] : Documentación del ejecutable relacionado con el proceso de `Morphing`.
+- [\ref rebobinar] : Documentación del ejecutable `Rebobinar`.
 
-@image html invert.png
-## Negativo:
+## Rebobinar:
+Lee un vídeo y lo reproduce al revés.
 
-Calcula el negativo de una imagen
+> __morphing__ \<InputDirectory> \<OutputDirectory\ >
+@param "<InputDirectory>" Directorio donde se encuentra video que se va a rebobinar
+@param "<OutputDirectory>" Directorio donde se escribirá el resultado de rebobinar el video
 
-> __negativo__ \<FichImagenOriginal\> \<FichImagenDestino\>
-@param "<FichImagenOriginal>" Imagen PGM a la que se va a calcular
-@param <FichImagenDestino> Imagen PGM resultado de calcular el negativo
+![Rebobinar](reverse_skelleton.gif)
 
+## Morphing:
+Realiza un morphing entre dos imágenes, creando una transición suave entre ellas.
 
+> __morphing__ \<InputDirectory1> \<InputDirectory2>\ <OutputDirectory\ <Nframes\>
+@param "<InputDirectory1>" Directorio donde se encuentra la primera imagen
+@param "<InputDirectory2>" Directorio donde se encuentra la segunda imagen
+@param "<OutputDirectory>" Directorio donde se escribirá el resultado del morphing
+@param <Nframes> Numero de pasos que se darán al realizar el morphing
+
+![Morphing](output_001.png)
 
 */
+
