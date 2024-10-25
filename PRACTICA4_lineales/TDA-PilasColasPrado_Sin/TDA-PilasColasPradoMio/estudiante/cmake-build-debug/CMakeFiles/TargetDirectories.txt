@@ -1,0 +1,7 @@
+/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA4_lineales/TDA-PilasColasPrado_Sin/TDA-PilasColasPradoMio/estudiante/cmake-build-debug/CMakeFiles/maxstack.dir
+/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA4_lineales/TDA-PilasColasPrado_Sin/TDA-PilasColasPradoMio/estudiante/cmake-build-debug/CMakeFiles/maxqueue.dir
+/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA4_lineales/TDA-PilasColasPrado_Sin/TDA-PilasColasPradoMio/estudiante/cmake-build-debug/CMakeFiles/pila_max.dir
+/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA4_lineales/TDA-PilasColasPrado_Sin/TDA-PilasColasPradoMio/estudiante/cmake-build-debug/CMakeFiles/cola_max.dir
+/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA4_lineales/TDA-PilasColasPrado_Sin/TDA-PilasColasPradoMio/estudiante/cmake-build-debug/CMakeFiles/doc_doxygen.dir
+/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA4_lineales/TDA-PilasColasPrado_Sin/TDA-PilasColasPradoMio/estudiante/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA4_lineales/TDA-PilasColasPrado_Sin/TDA-PilasColasPradoMio/estudiante/cmake-build-debug/CMakeFiles/rebuild_cache.dir

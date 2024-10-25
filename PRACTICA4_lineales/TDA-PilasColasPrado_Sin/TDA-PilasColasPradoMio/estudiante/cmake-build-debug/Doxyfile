@@ -1,0 +1,6 @@
+PROJECT_NAME           = "Práctica 2. Pilas y Colas"
+OUTPUT_DIRECTORY       = /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA4_lineales/TDA-PilasColasPrado_Sin/TDA-PilasColasPradoMio/estudiante/cmake-build-debug/doc_doxygen/
+INPUT                  = /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA4_lineales/TDA-PilasColasPrado_Sin/TDA-PilasColasPradoMio/estudiante/.//include /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA4_lineales/TDA-PilasColasPrado_Sin/TDA-PilasColasPradoMio/estudiante/.//src /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA4_lineales/TDA-PilasColasPrado_Sin/TDA-PilasColasPradoMio/estudiante/.//doc
+GENERATE_LATEX         = NO
+IMAGE_PATH             = /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA4_lineales/TDA-PilasColasPrado_Sin/TDA-PilasColasPradoMio/estudiante/.//doc
+EXTRACT_PRIVATE	       = NO
