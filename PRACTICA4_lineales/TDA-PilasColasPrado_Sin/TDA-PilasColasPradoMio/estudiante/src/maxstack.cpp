@@ -11,9 +11,9 @@
 
 void MaxStack::push(int value) {
 
-    int maxVal = maxValues.empty() ? value : std::max(value, maxValues.top());
-
-    maxValues.push(maxVal);
+    int maxVal = elements.empty() ? value : std::max(value, elements.back().max_value );
+    //maxValues.top()
+    //maxValues.push(maxVal);
     elements.push({value, maxVal});
 }
 void MaxStack::pop() { //hay que eliminar el ultimo y cambiar si necesario el maxValue
@@ -21,7 +21,7 @@ void MaxStack::pop() { //hay que eliminar el ultimo y cambiar si necesario el ma
         throw std::out_of_range("ERROR (pop): La pila está vacía.");
     }
 
-    if(elements.front().value == maxValues.top()) maxValues.pop();
+    //if(elements.front().value == maxValues.top()) maxValues.pop();
 
     std::queue<element> tempQueue;
     while (elements.size() > 1) {
@@ -46,7 +46,8 @@ int MaxStack::max() {
     if (elements.empty()) { //da igual cual revise por que van a la par de elementos
         throw std::out_of_range("ERROR (max): La pila está vacía.");
     }
-    return maxValues.top();
+    //return maxValues.top();
+    return elements.back().max_value;
 }
 
 int MaxStack::size() {

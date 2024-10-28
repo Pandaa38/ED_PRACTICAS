@@ -20,7 +20,7 @@ class MaxStack {
 
 private:
     std::queue<element> elements;
-    std::priority_queue<int> maxValues;
+    //std::priority_queue<int> maxValues;
 
 /**************************************************************************************/
 public:
