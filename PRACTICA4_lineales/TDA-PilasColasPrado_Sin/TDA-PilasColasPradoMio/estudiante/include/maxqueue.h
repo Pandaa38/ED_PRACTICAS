@@ -1,3 +1,8 @@
+
+//#ifndef MAXSTACK_H
+//#define MAXSTACK_H
+
+#include <iostream>
 #include <list>
 
 /**
@@ -6,5 +11,20 @@
  * @author
  */
 
+struct element {
+    int value;
+    int max_value;
+};
+
+class MaxQueue {
+
+private:
+    std::list<element> queue;
+
+/**************************************************************************************/
+public:
+
+
+};
 
 

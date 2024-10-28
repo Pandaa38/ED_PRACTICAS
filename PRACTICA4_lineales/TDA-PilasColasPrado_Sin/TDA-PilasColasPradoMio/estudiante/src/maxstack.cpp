@@ -9,6 +9,9 @@
  * @author
  */
 
+MaxStack::MaxStack() {}
+MaxStack::~MaxStack() {}
+
 void MaxStack::push(int value) {
 
     int maxVal = elements.empty() ? value : std::max(value, elements.back().max_value );
