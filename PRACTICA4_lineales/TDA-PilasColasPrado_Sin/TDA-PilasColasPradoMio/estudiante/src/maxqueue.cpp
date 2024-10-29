@@ -14,15 +14,14 @@ MaxQueue::~MaxQueue() {}
 //mal
 void MaxQueue::push(int value) {
 
-	int maxval = elements_.empty() ? value : std::max(value, elements_.back().max_value );
+	int maxval = elements_.empty() ? value : std::max(value, elements_.front().max_value );
 
-	for (auto i:elements_) {
+	//faltaba & son punteros preguntarlo bien
+	for (auto& i:elements_) {
 		i.max_value = maxval;
 	}
 
 	elements_.push_back({value, maxval});
-
-
 }
 
 void MaxQueue::pop() {
@@ -40,11 +39,19 @@ void MaxQueue::pop() {
 	*/
 	if( !elements_.empty()) {
 
-		auto maxE = std::max_element(elements_.begin(), elements_.end(), compare_elemet);
-		int new_max = maxE->value;
+		// auto maxE = std::max_element(elements_.begin(), elements_.end(), compare_elemet);
+		// int new_max = maxE->value;
+		//
+		// for (auto& i: elements_) {
+		// 	i.max_value = new_max;
+		// }
 
-		for (auto& i: elements_) {
-			i.max_value = new_max;
+		int new_max = elements_.front().value;
+		for (const auto& el : elements_) {
+			new_max = std::max(new_max, el.value);
+		}
+		for (auto& el : elements_) {
+			el.max_value = new_max;
 		}
 	}
 }

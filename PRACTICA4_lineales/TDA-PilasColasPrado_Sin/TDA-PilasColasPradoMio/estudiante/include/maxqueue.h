@@ -21,10 +21,11 @@ std::ostream &operator<<(std::ostream &os, const element &elem);
 
 class MaxQueue {
 private:
-    std::list<element> elements_;
+	std::list<element> elements_;
 
 /**************************************************************************************/
 public:
+
     MaxQueue();
 
     ~MaxQueue();
