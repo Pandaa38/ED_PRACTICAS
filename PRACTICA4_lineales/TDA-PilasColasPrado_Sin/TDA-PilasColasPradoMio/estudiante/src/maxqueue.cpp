@@ -4,7 +4,7 @@
 /**
  * @file maxqueue.cpp
  * @brief  Archivo de implementación del TDA MaxQueue
- * @author
+ * @author Maria Gallego Siles y Juan Reche Aguilar
 */
 
 

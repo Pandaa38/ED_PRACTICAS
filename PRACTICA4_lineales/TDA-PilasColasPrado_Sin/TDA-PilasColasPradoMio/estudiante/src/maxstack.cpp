@@ -6,7 +6,7 @@
 /**
  * @file maxstack.cpp
  * @brief  Archivo de implementación del TDA MaxStack
- * @author
+ * @author Maria Gallego Siles y Juan Reche Aguilar
  */
 
 MaxStack::MaxStack() {}
