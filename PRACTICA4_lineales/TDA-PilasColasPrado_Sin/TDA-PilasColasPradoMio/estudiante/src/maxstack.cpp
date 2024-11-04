@@ -19,7 +19,7 @@ void MaxStack::push(int value) {
     //maxValues.push(maxVal);
     elements.push({value, maxVal});
 }
-void MaxStack::pop() { //hay que eliminar el ultimo y cambiar si necesario el maxValue
+void MaxStack::pop() {
     if (elements.empty()) {
         throw std::out_of_range("ERROR (pop): La pila está vacía.");
     }
@@ -31,10 +31,9 @@ void MaxStack::pop() { //hay que eliminar el ultimo y cambiar si necesario el ma
         tempQueue.push(elements.front());
         elements.pop();
     }
-    // Eliminar el último elemento (que queda en `q`).
+
     elements.pop();
 
-    // Reemplazar la cola original con la auxiliar
     elements = tempQueue;
 }
 
@@ -46,7 +45,7 @@ element MaxStack::top() {
 }
 
 int MaxStack::max() {
-    if (elements.empty()) { //da igual cual revise por que van a la par de elementos
+    if (elements.empty()) {
         throw std::out_of_range("ERROR (max): La pila está vacía.");
     }
     //return maxValues.top();

@@ -20,9 +20,5 @@ int main(int argc, char *argv[]){
         }
     }
 
-	//cout << queue.elements_.front() << endl;
-	//cout << queue.elements_.back() << endl;
-
-
     return 0;
 }

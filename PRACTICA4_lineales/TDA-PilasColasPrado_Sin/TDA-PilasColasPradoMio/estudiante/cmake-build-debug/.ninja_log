@@ -1,0 +1,5 @@
+# ninja log v6
+2	385	1730717789212671455	CMakeFiles/cola_max.dir/src/cola_max.cpp.o	7c3dc7afdf329e2b
+2	401	1730717789212671455	CMakeFiles/maxqueue.dir/src/maxqueue.cpp.o	ee226ef6446b488e
+401	409	1730717789611677045	libmaxqueue.a	6e8f1d2dfb11ccfd
+409	481	1730717789619677157	bin/cola_max	f84065e96bbb72c6

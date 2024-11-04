@@ -1,11 +1,43 @@
-/*! \mainpage Título de la página principal
+/*! \mainpage TDA MaxStack y MaxQueue
 
-# Introducción
+@image html Programacion-informatica-scaled-e1724960033513.png "Documentación del TDA MaxStack y MaxQueue" width=800px
 
-A RELLENAR POR EL ESTUDIANTE
+\par Autores:
+\b Maria \b Gallego \b Siles \n
+\b Juan \b Reche \b Aguilar
+
+# ¿Qué es el TDA MaxStack?
+Nuestro TDA MaxStack es una instancia que representa una pila que permite
+realizar las operaciones básicas que porporciona una pila, , además de consultar el valor
+máximo actual alojado en la pila.
+
+# ¿Qué es el TDA MaxQueue?
+Nuestro TDA MaxQueue es una instancia que representa una cola que permite
+realizar las operaciones básicas que porporciona una cola, , además de consultar el valor
+máximo actual alojado en la cola.
 
 # Ejecutables
+- [\ref maxqueue] : Documentación del ejecutable relacionado con la clase `MaxQueue`.
+- [\ref maxstack] : Documentación del ejecutable relacionado con la clase `MaxStack`.
 
-A RELLENAR POR EL ESTUDIANTE
+## MaxStack:
+Se trata de una pila con capacidad para almacenar y obtener el máximo elemento en cualquier momento.
+
+> __pila_max__ \< >
+Los argumentos permitidos son carcateres que sean números y puntos. Notemos que no se puede introducir un solo punto.
+@param "<Numeros>" Numeros entero que se va a insertar
+@param "<Puntos>" Cada punto indica un entero a extraer
+
+![Pila_max](pila.png)
+
+## MaxQueue:
+Se trata de una cola con capacidad para almacenar y obtener el máximo elemento en cualquier momento.
+
+> __cola_max__ \< >
+Los argumentos permitidos son carcateres que sean números y puntos. Notemos que no se puede introducir un solo punto.
+@param "<Numeros>" Numeros entero que se va a insertar
+@param "<Puntos>" Cada punto indica un entero a extraer
+
+![Cola_max](cola.png)
 
 */
