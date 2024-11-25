@@ -163,7 +163,7 @@ istream& operator >>  (istream& is, QuienEsQuien &quienEsQuien) {
         }
         //se crea un tablero grafico
         quienEsQuien.tg = new TableroGrafico(400,400,nrows,ncols);
-        //ponemos en el tablero grafico las imágenes
+        //ponemos en el tablero grafico las imï¿½genes
         for (int i=0;i<nper;i++){
 
             quienEsQuien.tg->putImagen(i/ncols,i%ncols,quienEsQuien.personajes_images[i].c_str());
@@ -229,14 +229,20 @@ vector<bool> convertir_a_vector_bool(int n, int digitos) {
 /**
 * @brief Esta es una propuesta de cabecera de la funcion para crear el arbol.
 */
-bintree<Pregunta> QuienEsQuien::crear_arbol( vector<string> atributos,
+bintree<Pregunta> QuienEsQuien::crear_arbol (vector<string> atributos,
                                              int indice_atributo,
                                              vector<string> personajes,
                                              vector<bool> personajes_restantes,
-                                             vector<vector<bool>> tablero){
+                                             vector<vector<bool>> tablero) {
 
-     //TODO :D:D
      bintree<Pregunta> arbol;
+     int num_personajes
+     Pregunta pregunta_der(atributos[indice_atributo], );
+     Pregunta pregunta_izq(atributos[indice_atributo], );
+
+     arbol.insert_left(pregunta_izq, arbol);
+     arbol.insert_right(pregunta_der, arbol);
+
      return arbol;
 }
 
@@ -264,7 +270,7 @@ void QuienEsQuien::iniciar_juego(){
     //COMPLETAR AQUI
     
     if (modo_graph){
-     con->WriteText("Cuando completes QuienEsQuien, este mensaje lo podrás quitar");
+     con->WriteText("Cuando completes QuienEsQuien, este mensaje lo podrï¿½s quitar");
      char c;
      do{
         con->WriteText("Pulsa 0 para salir");
