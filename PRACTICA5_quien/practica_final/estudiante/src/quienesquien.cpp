@@ -174,23 +174,26 @@ istream& operator >>  (istream& is, QuienEsQuien &quienEsQuien) {
      return is;
 }
 
-ostream& operator <<  (ostream& os, const QuienEsQuien &quienEsQuien){
+ostream& operator << (ostream& os, const QuienEsQuien &quienEsQuien){
      //Escribimos la cabecera, que contiene los atributos y al final una columna para el nombre
+
+     cout<<"NUmero de Atributos "<<quienEsQuien.atributos.size()<<endl;
      for(vector<string>::const_iterator it_atributos = quienEsQuien.atributos.begin();
          it_atributos != quienEsQuien.atributos.end();
          it_atributos++){
-          os <<  *it_atributos <<  "\t";
+          os << *it_atributos << "\t";
      }
-     os <<  "Nombre personaje" <<  endl;
 
+     os << "Nombre personaje" << endl;
+     
      //Rellenamos con ceros y unos cada linea y al final ponemos el nombre del personaje.
      for(int indice_personaje=0;indice_personaje<quienEsQuien.personajes.size();indice_personaje++){
-          for(int indice_atributo=0;indice_atributo<quienEsQuien.personajes.size();indice_atributo++){
-               os << quienEsQuien.tablero[indice_personaje][indice_atributo] <<  "\t";
+          for(int indice_atributo=0;indice_atributo<quienEsQuien.atributos.size();indice_atributo++){
+               os << quienEsQuien.tablero[indice_personaje][indice_atributo] << "\t";
           }
           os << quienEsQuien.personajes[indice_personaje] << endl;
      }
-
+     
      return os;
 }
 
