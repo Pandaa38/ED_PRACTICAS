@@ -234,7 +234,6 @@ bintree<Pregunta> QuienEsQuien::crear_arbol (vector<string> atributos,
                                              vector<string> personajes,
                                              vector<bool> personajes_restantes,
                                              vector<vector<bool>> tablero) {
-
      bintree<Pregunta> arbol;
      // Son los personales con valor true en el vector de booleanos personajes_restantes
      int num_personajes = count(personajes_restantes.begin(),personajes_restantes.end(),true);
@@ -278,7 +277,7 @@ bintree<Pregunta> QuienEsQuien::crear_arbol (vector<string> atributos,
      bintree<Pregunta> subarbol_der = crear_arbol(atributos, indice_atributo + 1, personajes, personajes_no_cumplen, tablero);
      arbol.insert_right(arbol.root(), subarbol_der);
 
-     // return arbol;
+     return arbol;
 }
 
 bintree<Pregunta> QuienEsQuien::crear_arbol(){
@@ -297,15 +296,29 @@ void QuienEsQuien::usar_arbol(bintree<Pregunta> arbol_nuevo){
 }
 
 void QuienEsQuien::iniciar_juego(){
-     //TODO :D:D
      Ventana v(tg,con,"WisW");
      if (modo_graph){
           v.show();
      }
 
-     jugada_actual = arbol.root(); // Se asigna como primera jugada el nodo raiz del arbol
+     nodo_actual = arbol.root(); // Se asigna como primera jugada el nodo raiz del árbol
+     while ((*nodo_actual).obtener_num_personajes() != 1) { // Recorremos el árbol hasta llegar a un nodo hoja
+          // Hacemos la pregunta asociada al nodo actual jugada_actual
+          std::cout << "Pregunta: " << (*nodo_actual).obtener_pregunta() << std::endl;
+          std::cout << "Responde 1 para Sí o 0 para No: ";
 
+          bool respuesta;
+          cin >> respuesta;
 
+          if (respuesta) nodo_actual = nodo_actual.left();  // Respuesta afirmativa -> hijo izquierda
+          else nodo_actual = nodo_actual.right();              // Respuesta negativa -> hijo derecha
+     }
+
+     // Si llegamos a un nodo hoja, identificamos el personaje
+     // Los nodos hoja tienen como atributo el nombre del personaje según crear_arbol()
+     cout << "¡Ya lo sé! Tu personaje es: " << (*nodo_actual).obtener_pregunta() << std::endl;
+
+     nodo_actual = arbol.root(); // Reiniciamos la jugada_actual al nodo raíz
 
      if (modo_graph){
           con->WriteText("Cuando completes QuienEsQuien, este mensaje lo podr�s quitar");
@@ -321,8 +334,19 @@ void QuienEsQuien::iniciar_juego(){
 }	
 
 set<string> QuienEsQuien::informacion_jugada(bintree<Pregunta>::node jugada_actual) {
-     //TODO :)
+     string atributo_actual = (*jugada_actual).obtener_pregunta(); // Obtengo el atributo asociado a la pregunta
+
+     bool encontrado = false;
+     int pos_atributo = 0;
+     while (pos_atributo < atributos.size() && !encontrado) {
+          if (atributos[pos_atributo] == atributo_actual) encontrado = true;
+          else pos_atributo++;
+     }
+
      set<string> personajes_levantados;
+     for (int i = 0; i < personajes.size(); ++i)
+          if (tablero[i][pos_atributo]) personajes_levantados.insert(personajes[i]);
+
      return personajes_levantados;
 }
 
@@ -347,14 +371,72 @@ void QuienEsQuien::escribir_arbol_completo() const{
      escribir_esquema_arbol(cout,this->arbol,this->arbol.root(),pre);
 }
 
-void QuienEsQuien::eliminar_nodos_redundantes(){
-// TODO :)
+
+// nodo_actual incializado a la raiz
+// a lo mejor hay que usar el atrbibuto propio de la clase jugada_actual
+void QuienEsQuien::eliminar_nodos_redundantes_recursiva(bintree<Pregunta>::node nodo_actual) {
+     // Verificar si el nodo es una hoja, no tiene ningún hijo
+     if (nodo_actual.left().null() && nodo_actual.right().null()) {
+          return;  // No hace falta seguir procesando
+     }
+
+     // Mientras el nodo tenga hijos, seguimos recorriendo el árbol
+     if (!nodo_actual.left().null()) {
+          eliminar_nodos_redundantes_recursiva(nodo_actual.left());
+     }
+     if (!nodo_actual.right().null()) {
+          eliminar_nodos_redundantes_recursiva(nodo_actual.right());
+     }
+
+     // Hemos llegado a un nodo redundante, esto es un nodo que tiene un solo hijo
+     bintree<Pregunta> subarbol;   // Subarbol que reemplaza al nodo redundante
+
+     // nodo_actual no tiene hijo izquierda
+     if (nodo_actual.left().null()) {
+          arbol.prune_right(nodo_actual, subarbol); // Podamos lo que hay a su derecha
+          arbol.replace_subtree(nodo_actual, subarbol, nodo_actual.right());
+     }
+     // nodo_actual no tiene hijo derecha
+     else if (nodo_actual.right().null()) {
+          arbol.prune_left(nodo_actual, subarbol); // Podamos lo que hay a su izquierda
+          arbol.replace_subtree(nodo_actual, subarbol, nodo_actual.left());
+     }
 }
 
-float QuienEsQuien::profundidad_promedio_hojas(){
-//TODO :)
+// La he creado para no modificar el main
+void QuienEsQuien::eliminar_nodos_redundantes() {
+     // Llamamos a la función recursiva para empezar desde la raíz del árbol
+     eliminar_nodos_redundantes_recursiva(arbol.root());
+}
 
-     return -1;
+// Calcula la profundidad de todos los nodos hijos
+vector<int> QuienEsQuien::profundidad_hojas(int& profundidad, bintree<Pregunta>::node nivel_actual) {
+     vector<int> prof_hojas;
+
+     if ((*nivel_actual).obtener_num_personajes() == 1) { // Es un hijo
+          //profundidad--;
+          prof_hojas.push_back(profundidad);
+     }
+     else { // Seguimos recorriendo la rama
+          profundidad++;
+          profundidad_hojas(profundidad, nivel_actual.left());
+          profundidad_hojas(profundidad, nivel_actual.right());
+     }
+     return prof_hojas;
+}
+
+float QuienEsQuien::profundidad_promedio_hojas() {
+     bintree<Pregunta>::node nivel_actual = arbol.root();
+
+     float profundidad_promedio = 0;
+     int profundidad = 0;
+
+     vector<int> prof_hojas = profundidad_hojas(profundidad, nivel_actual);
+     vector<int>::iterator it;
+     for (it=prof_hojas.begin(); it!=prof_hojas.end(); ++it) // Sumo todas las profundidades calculadas
+          profundidad_promedio += (*it);
+
+     return profundidad_promedio/prof_hojas.size();       // Divido las profundidades entre num_hijos
 }
 
 /**
@@ -417,6 +499,18 @@ void QuienEsQuien::setImagenOcultar(const char * n){
 
 void QuienEsQuien::setModoGraph(bool m){
     modo_graph=m;
+}
+
+void QuienEsQuien::preguntas_formuladas (bintree<Pregunta>::node jugada) {
+     while (jugada != arbol.root()) { // Siguen quedando preguntas formuladas
+          string atributo = (*jugada.parent()).obtener_pregunta();
+          cout << atributo << " - ";
+
+          if (jugada == jugada.parent().left()) cout << "si" << endl;
+          else cout << "no" << endl;
+
+          jugada = jugada.parent();     // Ascendemos un nível
+     }
 }
 
 

@@ -2,7 +2,7 @@
  * @file quienesquien.h
  * @brief Fichero cabecera del QuienEsQuien.
  *
- * Almacena el árbol de preguntas para jugar al ¿Quién es quién?.
+ * Almacena el ï¿½rbol de preguntas para jugar al ï¿½Quiï¿½n es quiï¿½n?.
  */
 
 #ifndef _QUIENESQUIEN_H_
@@ -32,23 +32,23 @@ using namespace std;
 class QuienEsQuien{
 private:
 	/**
-	  * @brief Almacena el nombre de los personajes. Su índice en
-	  *        este vector corresponde con el índice de su
-	  *        descripción en el tablero.
+	  * @brief Almacena el nombre de los personajes. Su ï¿½ndice en
+	  *        este vector corresponde con el ï¿½ndice de su
+	  *        descripciï¿½n en el tablero.
 	  */
 	vector<string> personajes;
 
 	 /**
-      * @brief Almacena el nombre de las imagenes en disco de los  personajes. Su índice en
-      *        este vector corresponde con el índice de su
-      *        descripción en el tablero.
+      * @brief Almacena el nombre de las imagenes en disco de los  personajes. Su ï¿½ndice en
+      *        este vector corresponde con el ï¿½ndice de su
+      *        descripciï¿½n en el tablero.
       */
     vector<string> personajes_images;
 
 
 	/**
-	  * @brief Almacena los atributos.  Su índice en este vector
-	  *        corresponde con el índice correspondiente de cada
+	  * @brief Almacena los atributos.  Su ï¿½ndice en este vector
+	  *        corresponde con el ï¿½ndice correspondiente de cada
 	  *        vector del tablero.
 	  */
 	vector<string> atributos;
@@ -68,7 +68,7 @@ private:
 	  * @brief Nodo del arbol de preguntas correspondiente a la jugada
 	  *        actual.
 	  */
-	bintree<Pregunta>::node jugada_actual;
+	bintree<Pregunta>::node nodo_actual;
 
 	 /**
      * @brief tg es el tablero grafico donde se muestra los personajes
@@ -92,7 +92,7 @@ private:
 
 
 	/**
-	  * @brief Esta es una propuesta de cabecera de la función para crear el arbol.
+	  * @brief Esta es una propuesta de cabecera de la funciï¿½n para crear el arbol.
 	  */
 	 bintree<Pregunta> crear_arbol(vector<string> atributos,
                                     int indice_atributo,
@@ -101,7 +101,7 @@ private:
                                     vector<vector<bool>> tablero);
 public:
 	/**
-	  * @brief Constructor básico de la clase
+	  * @brief Constructor bï¿½sico de la clase
 	  */
 	QuienEsQuien();
 	/**
@@ -118,14 +118,14 @@ public:
 	  */
 	void limpiar();
 	/**
-	* @brief Sobrecarga del operador de asignación.
+	* @brief Sobrecarga del operador de asignaciï¿½n.
 	* @param quienEsQuien objeto a copiar.
 	* @return Referencia al objeto copiado.
 	*/
 	QuienEsQuien& operator = (const QuienEsQuien &quienEsQuien);
 
 	/**
-	  * @brief Operador de extracción de flujo.
+	  * @brief Operador de extracciï¿½n de flujo.
 	  * @param is Stream de entrada
           * @param quienEsQuien Quien es quien a leer.
 	  * @return Referencia al stream de entrada.
@@ -133,16 +133,16 @@ public:
 	  * Lee de @e is un quien es quien y lo almacena en @e
 	  * quienEsQuien. El formato aceptado para la lectura es un TSV
 	  * (tab-separated values) en el que las columnas tienen cabecera y
-	  * son las preguntas. La última columna corresponde al nombre del
-	  * personaje. Tras la cabecera se especifica en cada línea un
+	  * son las preguntas. La ï¿½ltima columna corresponde al nombre del
+	  * personaje. Tras la cabecera se especifica en cada lï¿½nea un
 	  * personaje, teniendo el valor 1 o 0 si tiene/no tiene el
-	  * atributo de la columna. En la última columna se da el
+	  * atributo de la columna. En la ï¿½ltima columna se da el
 	  * nombre del personaje.
 	  */
 	friend istream& operator >> (istream& is, QuienEsQuien &quienEsQuien);
 
 	/**
-	  * @brief Operador de inserción de flujo.
+	  * @brief Operador de inserciï¿½n de flujo.
 	  * @param os Stream de salida
 	  * @param quienEsQuien Quien es quien a escribir.
 	  * @return Referencia al stream de salida.
@@ -150,10 +150,10 @@ public:
 	  * Escribe en @e is un quien es quien.
 	  * El formato usado para la escritura es un TSV
 	  * (tab-separated values) en el que las columnas tienen cabecera y
-	  * son las preguntas. La última columna corresponde al nombre del
-	  * personaje. Tras la cabecera se especifica en cada línea un
+	  * son las preguntas. La ï¿½ltima columna corresponde al nombre del
+	  * personaje. Tras la cabecera se especifica en cada lï¿½nea un
 	  * personaje, teniendo el valor 1 o 0 si tiene/no tiene el
-	  * atributo de la columna. En la última columna se da el
+	  * atributo de la columna. En la ï¿½ltima columna se da el
 	  * nombre del personaje.
 	  */
 	friend ostream& operator << (ostream& os, const QuienEsQuien &quienEsQuien);
@@ -164,12 +164,12 @@ public:
 	void mostrar_estructuras_leidas();
 
 	/**
-	  * @brief Este método construye el árbol de preguntas para todos los personajes del tablero.
+	  * @brief Este mï¿½todo construye el ï¿½rbol de preguntas para todos los personajes del tablero.
 	  */
 	bintree<Pregunta> crear_arbol();
 
 	/**
-	  * @brief Sustituye el árbol actual por el árbol pasado por parámetro.
+	  * @brief Sustituye el ï¿½rbol actual por el ï¿½rbol pasado por parï¿½metro.
 	  *
 	  * @param arbol_nuevo Arbol de preguntas que sustituye al actual.
 	  *
@@ -182,22 +182,30 @@ public:
 	void escribir_arbol_completo() const;
 
 	/**
-	  * @brief Método que modifica el árbol de preguntas para que haya
-	  *        preguntas redundantes.
-	  * @post El árbol de preguntas se modifica.
+	  * @brief Metodo que modifica el arbol de preguntas para que no haya preguntas redundantes.
+	  * @param nodo_actual nodo actual en el que nos encontramos
+	  * @post El ï¿½rbol de preguntas se modifica.
+	  */
+	void eliminar_nodos_redundantes_recursiva(bintree<Pregunta>::node nodo_actual);
+
+	/**
+	  * @brief Metodo que modifica el arbol de preguntas para que haya preguntas redundantes.
+	  *
+	  * @post El ï¿½rbol de preguntas se modifica.
+	  * Nota: Pasa la raiz del arbol al metodo eliminar_nodos_redundantes_recursiva.
 	  */
 	void eliminar_nodos_redundantes();
 
 	/**
 	  * @brief Inicializa el juego.
-	  * @post  Si la partida anterior no había terminado se
+	  * @post  Si la partida anterior no habï¿½a terminado se
 	  *        pierde el progreso.
 	  */
 	void iniciar_juego();
 
 	/**
 	  * @brief Dado un estado del tablero devuelve los nombres de
-	  *        los personajes que aún no han sido tumbados en el
+	  *        los personajes que aï¿½n no han sido tumbados en el
 	  *        tablero.
 	  *
 	  * @param jugada_actual Nodo del estado del tablero.
@@ -209,10 +217,23 @@ public:
 	  */
 	set<string> informacion_jugada(bintree<Pregunta>::node jugada_actual);
 
+
 	/**
-	  * @brief Este método permite calcular la media de la profundidad de las hojas del árbol.
-	  * Este valor representa el número (promedio) de preguntas necesarias para adivinar cada personaje.
-	  * A menor profundidad promedio, mejor solución. Esta métrica es un indicador para evaluar la calidad de vuestra solución.
+	  * @brief Este metodo permite calcular la profundidad de todas las hojas del arbol.
+	  *
+	  * @param profundidad profundidad que tiene hasta el momento
+	  * @param nivel_actual nodo actual en el que nos encontramos
+	  * @return vector de tipo int donde en cada posiciÃ³n se recoge la profundidad de una hoja distinta del arbol
+	  *
+	  * @pre El arbol de preguntas debe haber sido construido previamente.
+	  */
+	vector<int> profundidad_hojas(int& profundidad, bintree<Pregunta>::node nivel_actual);
+
+
+	/**
+	  * @brief Este mï¿½todo permite calcular la media de la profundidad de las hojas del ï¿½rbol.
+	  * Este valor representa el nï¿½mero (promedio) de preguntas necesarias para adivinar cada personaje.
+	  * A menor profundidad promedio, mejor soluciï¿½n. Esta mï¿½trica es un indicador para evaluar la calidad de vuestra soluciï¿½n.
 	  *
 	  * @return Profundidad media del arbol de preguntas.
 	  *
@@ -220,10 +241,11 @@ public:
 	  */
 	float profundidad_promedio_hojas();
 
+
 	/**
 	  * @brief Rellena los datos del QuienEsQuien con un tablero calculado aleatoriamente.
 	  *
-	  * @param numero_de_personajes Número de personajes que tiene el tablero a crear.
+	  * @param numero_de_personajes Nï¿½mero de personajes que tiene el tablero a crear.
 	  */
 	void tablero_aleatorio(int numero_de_personajes);
 
@@ -242,10 +264,31 @@ public:
 
      /**
      * @brief Oculta en el tablero grafico los personajes que no estan activos
-     * @param personajes_activos: personajes que están activos
+     * @param personajes_activos: personajes que estï¿½n activos
      */
     void ocultar_personajes_graph(const set<string> &personajes_activos);
 
+
+	/**
+	************************************************************************************************************
+	*                                        MÃ‰TODOS ADICIONALES                                               *
+	************************************************************************************************************
+	**/
+
+	// Podemos plantearlo como una funciÃ³n que devuleve un flujo de salida
+	/**
+	* @brief Este mÃ©todo se aplica sobre un nodo del Ã¡rbol de preguntas (jugada) para obtener una
+	* descripciÃ³n de las preguntas formuladas anteriormente y las respuestas dadas por el usuario
+	* hasta ahora. Por ejemplo:
+	* â€œEl personaje oculto tiene las siguientes caracterÃ­sticas:
+	*	Mujer â€“ no
+	*	Ojos Marrones â€“ si
+	* pero aÃºn no sÃ© cuÃ¡l esâ€
+	*
+	* @param jugada nodo actual del Ã¡rbol de Preguntas donde nos enocntramos
+	* @post escribe un mensaje en la salida estÃ¡ndar
+	*/
+	void preguntas_formuladas (bintree<Pregunta>::node jugada);
 
 };
 
