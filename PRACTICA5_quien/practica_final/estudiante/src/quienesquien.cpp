@@ -236,14 +236,49 @@ bintree<Pregunta> QuienEsQuien::crear_arbol (vector<string> atributos,
                                              vector<vector<bool>> tablero) {
 
      bintree<Pregunta> arbol;
-     int num_personajes
-     Pregunta pregunta_der(atributos[indice_atributo], );
-     Pregunta pregunta_izq(atributos[indice_atributo], );
+     // Son los personales con valor true en el vector de booleanos personajes_restantes
+     int num_personajes = count(personajes_restantes.begin(),personajes_restantes.end(),true);
 
-     arbol.insert_left(pregunta_izq, arbol);
-     arbol.insert_right(pregunta_der, arbol);
+     // Caso en el que solo me queda un nodo hoja
+     int pos_personaje = -1;
+     bool encontrado = false;
+     if (num_personajes == 1) {   // Si solo me queda un perosnaje se trata de un nodo hoja
+          for(int i = 0; i < personajes_restantes.size() && !encontrado; ++i) {
+               if (personajes_restantes[i]) {   // Extraigo su posición para conseguir el
+                    pos_personaje = i;       // nombre del personaje
+                    encontrado = true;
+               }
+          }
+          // Crear un nodo hoja con el nombre del personaje
+          Pregunta hoja(personajes[pos_personaje], num_personajes);
+          arbol.insert_left(hoja, arbol);
+          return arbol;
+     }
 
-     return arbol;
+     // Inicilizo los siguientes vectores booleanos para separar los personajes según cumplan el atributo actual o no
+     vector<bool> personajes_cumplen(personajes_restantes.size(), false);
+     vector<bool> personajes_no_cumplen(personajes_restantes.size(), false);
+
+     for (int i = 0; i < personajes_restantes.size(); i++) {
+          if (personajes_restantes[i]) {     // Divido según cumplan o no el atributo
+               if (tablero[i][indice_atributo]) personajes_cumplen[i] = true;
+               else personajes_no_cumplen[i] = true;
+          }
+     }
+
+     // Crear el nodo actual con el atributo y el número total de personajes en esta rama
+     Pregunta nodo_actual(atributos[indice_atributo], num_personajes);
+     arbol = bintree<Pregunta>(nodo_actual);
+
+     // Construir subárbol izquierdo (cumplen el atributo)
+     bintree<Pregunta> subarbol_izq = crear_arbol(atributos, indice_atributo + 1, personajes, personajes_cumplen, tablero);
+     arbol.insert_left(arbol.root(), subarbol_izq);
+
+     // Construir subárbol derecho (no cumplen el atributo)
+     bintree<Pregunta> subarbol_der = crear_arbol(atributos, indice_atributo + 1, personajes, personajes_no_cumplen, tablero);
+     arbol.insert_right(arbol.root(), subarbol_der);
+
+     // return arbol;
 }
 
 bintree<Pregunta> QuienEsQuien::crear_arbol(){
@@ -263,26 +298,29 @@ void QuienEsQuien::usar_arbol(bintree<Pregunta> arbol_nuevo){
 
 void QuienEsQuien::iniciar_juego(){
      //TODO :D:D
-    Ventana v(tg,con,"WisW");
-    if (modo_graph){
-        v.show();
-    }
-    //COMPLETAR AQUI
-    
-    if (modo_graph){
-     con->WriteText("Cuando completes QuienEsQuien, este mensaje lo podr�s quitar");
-     char c;
-     do{
-        con->WriteText("Pulsa 0 para salir");
-	c = con->ReadChar();
-     
-     }while (c!='0');
-     
-    }
-    v.cerrar();
+     Ventana v(tg,con,"WisW");
+     if (modo_graph){
+          v.show();
+     }
+
+     jugada_actual = arbol.root(); // Se asigna como primera jugada el nodo raiz del arbol
+
+
+
+     if (modo_graph){
+          con->WriteText("Cuando completes QuienEsQuien, este mensaje lo podr�s quitar");
+          char c;
+     do {
+          con->WriteText("Pulsa 0 para salir");
+          c = con->ReadChar();
+
+     } while (c!='0');
+
+     }
+     v.cerrar();
 }	
 
-set<string> QuienEsQuien::informacion_jugada(bintree<Pregunta>::node jugada_actual){
+set<string> QuienEsQuien::informacion_jugada(bintree<Pregunta>::node jugada_actual) {
      //TODO :)
      set<string> personajes_levantados;
      return personajes_levantados;
