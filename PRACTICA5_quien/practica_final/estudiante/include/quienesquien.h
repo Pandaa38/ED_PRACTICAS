@@ -290,6 +290,60 @@ public:
 	*/
 	void preguntas_formuladas (bintree<Pregunta>::node jugada);
 
+
+	/**
+	* @brief Este método inserta el personaje nuevo en el árbol ya construido.
+	*
+	* Se recorrerá el árbol desde la raíz hasta encontrar dónde se inserta el nuevo personaje. Este recorrido por el
+	* árbol nos lleva a un nodo hoja (otro personaje del tablero) y tendremos que añadir un nivel más
+	* (una pregunta más) para distinguir al nuevo personaje del nodo hoja que ya estaba en el árbol.
+	*
+	* @param nombre nombre del personaje que se añade
+	* @param caracteristicas vector de características para el personaje a añadir
+	* @param nombre_imagen_personaje nombre de la imagen en disco del personaje que se añade (modo grafico)
+	* @return void
+	*
+	* @pre 1) El arbol de preguntas debe haber sido construido previamente.
+	*		2) vector<bool> de características tiene el mismo tamaño y los atributos están en el mismo orden que el
+	*		especificado en el fichero de entrada.
+	* @post El arbol de preguntas es modificado
+	**/
+	void aniade_personaje (string nombre, vector<bool> caracteristicas,string nombre_imagen_personaje="");
+
+	/**
+	* @brief Este método elimina un personaje del árbol ya construido.
+	*
+	* Utilizaremos las características del personaje para recorrer el árbol desde la raíz y encontrar su nodo hoja
+	* asociado. Al eliminarlo, tendremos que eliminar también a su padre (porque ahora será una pregunta inútil),
+	* esto es, reemplazar a su padre por su otro nodo hijo.
+	*
+	* @param nombre nombre del personaje que se elimina
+	* @return void
+	*
+	* @pre El arbol de preguntas debe haber sido construido previamente.
+	* @post El arbol de preguntas es modificado
+	**/
+	void elimina_personaje (string nombre);
+
+private:
+
+	/**
+	* @brief Escoge la mejor pregunta sabiendo las preguntas que ya se han realizado.
+	*  La mejor pregunta será aquella cuyo vector correspondiente a atributos (columnas) de tablero
+	*  tengán el numero de 0 (false) y 1(true) mas equiparado. Esto ocurre cuando el numero de true o de false
+	*  es igual a num_personajes_vivos/2.
+
+	*
+	* @param personajes_restantes vector booleano que nos indica que personaje sigue vivo en la rama
+	* @param indice_atributo posicion del vector de atributos, marca el inicio del vector a partir del cuál
+	*        hay preguntas que no se han realizado.
+	*
+	* @return void
+	* @post modifica el orden del vector<string> atributos del objeto implicito
+	*
+	*/
+	void MejorPregunta(const vector<bool>& personajes_restantes, int indice_atributo);
+
 };
 
 #endif
