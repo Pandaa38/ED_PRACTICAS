@@ -41,3 +41,10 @@
 3	10	1733943983704463127	/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen/mocs_compilation.cpp	3bb6de696fd2c210
 10	1752	1733943983711463228	CMakeFiles/quienesquien.dir/src/quienesquien.cpp.o	75c4cc6792b9b248
 1752	1983	1733943985453488366	bin/quienesquien	6009867c40cfcff2
+14	31	1734106773583572098	quienesquien_autogen/timestamp	3bb6de696fd2c210
+14	31	1734106773583572098	quienesquien_autogen/mocs_compilation.cpp	3bb6de696fd2c210
+14	31	1734106773583572098	/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen/timestamp	3bb6de696fd2c210
+14	31	1734106773583572098	/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen/mocs_compilation.cpp	3bb6de696fd2c210
+31	1915	1734106773600570888	CMakeFiles/quienesquien.dir/src/main.cpp.o	eb22c1121de26f55
+31	2398	1734106773601570817	CMakeFiles/quienesquien.dir/src/quienesquien.cpp.o	75c4cc6792b9b248
+2398	2764	1734106775968402786	bin/quienesquien	6009867c40cfcff2
