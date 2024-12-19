@@ -21,6 +21,11 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
+			"path" : "/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeUnixFindMake.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
 			"path" : "/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake"
 		},
 		{
@@ -1015,8 +1020,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug",
-		"source" : "/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante"
+		"build" : "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug",
+		"source" : "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante"
 	},
 	"version" : 
 	{

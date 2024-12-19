@@ -320,13 +320,16 @@ void QuienEsQuien::iniciar_juego(){
      escribir_arbol_completo();*/
 
      nodo_actual = arbol.root(); // Se asigna como primera jugada el nodo raiz del árbol
-     while ((*nodo_actual).obtener_num_personajes() != 1) { // Recorremos el árbol hasta llegar a un nodo hoja
+     while (!(*nodo_actual).es_personaje()) { // Recorremos el árbol hasta llegar a un nodo hoja
           // Hacemos la pregunta asociada al nodo actual jugada_actual
           std::cout << "Pregunta: " << (*nodo_actual).obtener_pregunta() << std::endl;
-          std::cout << "Responde 1 para Sí o 0 para No: ";
+          string resp;
+          do {
+               std::cout << "Responde 1 para Sí o 0 para No: ";
+               cin >> resp;
+          }while (resp != "0" && resp != "1");
 
-          bool respuesta;
-          cin >> respuesta;
+          int respuesta = stoi(resp);
 
           if (respuesta) nodo_actual = nodo_actual.left();  // Respuesta afirmativa -> hijo izquierda
           else nodo_actual = nodo_actual.right();           // Respuesta negativa -> hijo derecha
@@ -356,7 +359,7 @@ set<string> QuienEsQuien::informacion_jugada(bintree<Pregunta>::node jugada_actu
      if (jugada_actual.null()) return {}; // Devolver conjunto vacío
 
      // Caso 2: Nodo hoja asociado (tenemos un único personaje)
-     if ((*jugada_actual).obtener_num_personajes() == 1) {
+     if ((*jugada_actual).es_personaje()) {
           set<string> personajes_levantados;
           personajes_levantados.insert((*jugada_actual).obtener_pregunta()); // Insertar el personaje
           return personajes_levantados;
@@ -542,7 +545,7 @@ void QuienEsQuien:: aniade_personaje (string nombre, vector<bool> caracteristica
      while (pos_caracteristicas<caracteristicas.size() && !nodo_actual.left().null() || !nodo_actual.right().null()) {
           //Modifico cada nodo añadiendo un personaje a num_persnajes
           Pregunta pregunta_nueva;
-          if ((*nodo_actual).obtener_num_personajes() == 1) {
+          if ((*nodo_actual).es_personaje()) {
                Pregunta preg((*nodo_actual).obtener_personaje(), (*nodo_actual).obtener_num_personajes()+1);
                pregunta_nueva = preg;
           }

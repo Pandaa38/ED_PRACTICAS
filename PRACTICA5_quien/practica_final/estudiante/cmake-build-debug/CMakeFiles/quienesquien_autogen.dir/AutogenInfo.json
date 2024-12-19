@@ -1,15 +1,16 @@
 {
-	"BUILD_DIR" : "/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen",
-	"CMAKE_BINARY_DIR" : "/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante",
+	"BUILD_DIR" : "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen",
+	"CMAKE_BINARY_DIR" : "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante",
 	"CMAKE_EXECUTABLE" : "/snap/clion/310/bin/cmake/linux/x64/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/CMakeLists.txt",
+		"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/CMakeLists.txt",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeSystem.cmake.in",
-		"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/3.30.5/CMakeSystem.cmake",
+		"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/3.30.5/CMakeSystem.cmake",
+		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeUnixFindMake.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux-Initialize.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake",
@@ -64,7 +65,7 @@
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeFindBinUtils.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/Compiler/GNU-FindBinUtils.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCCompiler.cmake.in",
-		"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/3.30.5/CMakeCCompiler.cmake",
+		"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/3.30.5/CMakeCCompiler.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompiler.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux-Determine-CXX.cmake",
@@ -115,7 +116,7 @@
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeFindBinUtils.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/Compiler/GNU-FindBinUtils.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXCompiler.cmake.in",
-		"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
+		"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake",
@@ -141,7 +142,7 @@
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCCompiler.cmake.in",
-		"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/3.30.5/CMakeCCompiler.cmake",
+		"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/3.30.5/CMakeCCompiler.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake",
@@ -161,7 +162,7 @@
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXCompiler.cmake.in",
-		"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
+		"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake",
@@ -219,66 +220,66 @@
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindDoxygen.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindPackageMessage.cmake",
-		"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/Doxyfile.in"
+		"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/Doxyfile.in"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante",
+	"CMAKE_SOURCE_DIR" : "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante",
 	"CROSS_CONFIG" : false,
-	"DEP_FILE" : "/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen/deps",
+	"DEP_FILE" : "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "quienesquien_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/include/bintree.h",
+			"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/include/bintree.h",
 			"Mu",
 			"6YEA5652QU/moc_bintree.cpp",
 			null
 		],
 		[
-			"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/include/bintree.hxx",
+			"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/include/bintree.hxx",
 			"Mu",
 			"6YEA5652QU/moc_bintree_hxx.cpp",
 			null
 		],
 		[
-			"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/include/consola.h",
+			"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/include/consola.h",
 			"Mu",
 			"6YEA5652QU/moc_consola.cpp",
 			null
 		],
 		[
-			"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/include/node.hxx",
+			"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/include/node.hxx",
 			"Mu",
 			"6YEA5652QU/moc_node.cpp",
 			null
 		],
 		[
-			"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/include/pregunta.h",
+			"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/include/pregunta.h",
 			"Mu",
 			"6YEA5652QU/moc_pregunta.cpp",
 			null
 		],
 		[
-			"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/include/quienesquien.h",
+			"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/include/quienesquien.h",
 			"Mu",
 			"6YEA5652QU/moc_quienesquien.cpp",
 			null
 		],
 		[
-			"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/include/tablerografico.h",
+			"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/include/tablerografico.h",
 			"Mu",
 			"6YEA5652QU/moc_tablerografico.cpp",
 			null
 		],
 		[
-			"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/include/ventana.h",
+			"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/include/ventana.h",
 			"Mu",
 			"6YEA5652QU/moc_ventana.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
@@ -289,9 +290,9 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug",
-		"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante",
-		"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/include",
+		"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug",
+		"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante",
+		"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/include",
 		"/usr/include/x86_64-linux-gnu/qt5",
 		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
 		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
@@ -317,46 +318,46 @@
 		"-c",
 		"/snap/clion/310/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
-	"PARALLEL" : 4,
-	"PARSE_CACHE_FILE" : "/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/quienesquien_autogen.dir/ParseCache.txt",
+	"PARALLEL" : 2,
+	"PARSE_CACHE_FILE" : "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/quienesquien_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
 	"QT_UIC_EXECUTABLE" : "",
 	"QT_VERSION_MAJOR" : 5,
 	"QT_VERSION_MINOR" : 15,
-	"SETTINGS_FILE" : "/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/quienesquien_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/quienesquien_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
-			"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/consola.cpp",
+			"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/consola.cpp",
 			"Mu",
 			null
 		],
 		[
-			"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/main.cpp",
+			"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/main.cpp",
 			"Mu",
 			null
 		],
 		[
-			"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/pregunta.cpp",
+			"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/pregunta.cpp",
 			"Mu",
 			null
 		],
 		[
-			"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/quienesquien.cpp",
+			"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/quienesquien.cpp",
 			"Mu",
 			null
 		],
 		[
-			"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/tablerografico.cpp",
+			"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/tablerografico.cpp",
 			"Mu",
 			null
 		],
 		[
-			"/home/maria/Carrera/Segundo/1cuatri/ED/Practicas/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/ventana.cpp",
+			"/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/ventana.cpp",
 			"Mu",
 			null
 		]
