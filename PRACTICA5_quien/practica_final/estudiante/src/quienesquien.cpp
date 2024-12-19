@@ -237,21 +237,22 @@ bintree<Pregunta> QuienEsQuien::crear_arbol (vector<string> atributos,
      if (num_personajes == 0) return arbol;  //Si no quedan más personajes devuelvo un arbol vacio
 
      // Caso en el que solo me queda un nodo hoja
-     int pos_personaje = -1;
-     bool encontrado = false;
      if (num_personajes == 1) {   // Si solo me quedan un personaje es un nodo hoja
-          for(int i = 0; i < personajes_restantes.size() && !encontrado; ++i) {
-               if (personajes_restantes[i]) {   // Extraigo su posición para conseguir el
-                    pos_personaje = i;          // nombre del personaje
-                    encontrado = true;
-               }
-               personajes_restantes[i] = false;
+          int pos_personaje = 0;
+          bool encontrado = false;
+
+          while (!encontrado) {
+               if(personajes_restantes[pos_personaje]) encontrado = true;
+               else pos_personaje++;
           }
 
-          // Crear un nodo hoja con el nombre del personaje
-          Pregunta preg_hoja(personajes[pos_personaje], num_personajes);
+          if (encontrado) {
+               personajes_restantes[pos_personaje] = false;
+               // Crear un nodo hoja con el nombre del personaje
+               Pregunta preg_hoja(personajes[pos_personaje], num_personajes);
 
-          arbol = bintree<Pregunta>(preg_hoja); // Crear un árbol con un único nodo
+               arbol = bintree<Pregunta>(preg_hoja); // Crear un árbol con un único nodo
+          }
           return arbol; // Retornar el árbol hoja
      }
 
@@ -320,8 +321,6 @@ void QuienEsQuien::iniciar_juego(){
      // Si llegamos a un nodo hoja, identificamos el personaje
      // Los nodos hoja tienen como atributo el nombre del personaje según crear_arbol()
      cout << "¡Ya lo sé! Tu personaje es: " << (*nodo_actual).obtener_personaje() << std::endl;
-
-     nodo_actual = arbol.root(); // Reiniciamos la jugada_actual al nodo raíz
 
      if (modo_graph){
           con->WriteText("Cuando completes QuienEsQuien, este mensaje lo podr�s quitar");
@@ -436,8 +435,8 @@ float QuienEsQuien::profundidad_promedio_hojas() {
 
      // Calculamos el promedio de las profundidades
      float suma_prof = 0.0;
-     for (vector<int>::iterator it=prof_hojas.begin(); it!=prof_hojas.end(); ++it) {
-          suma_prof += (*it);     // Sumo todas las profundidades
+     for (auto it:prof_hojas) {
+          suma_prof += it;     // Sumo todas las profundidades
      }
      //cout <<"suma_prof:" << suma_prof << endl;
      return static_cast<float>(suma_prof)/prof_hojas.size();  // Divido las profundidades entre num_hijos ==>
