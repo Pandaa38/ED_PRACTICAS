@@ -235,7 +235,7 @@ public:
 	  *
 	  * @param profundidad profundidad que tiene hasta el momento
 	  * @param nivel_actual nodo actual en el que nos encontramos
-	  * @param prof_hojas refrencia a un vector de tipo int donde en cada posición se recoge la profundidad
+	  * @param prof_hojas referencia a un vector de tipo int donde en cada posición se recoge la profundidad
 	  *        de una hoja distinta del arbol
 	  * @return void
 	  *
