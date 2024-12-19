@@ -305,6 +305,16 @@ void QuienEsQuien::iniciar_juego(){
           v.show();
      }
 
+     //Prueba de aniade_personaje
+     string nombre="prueba";
+     vector<bool> caracteristicas={1, 0, 1}; //Es mujer, no tiene ojos marrones, si tiene gafas(para distinguirlo de Ana)
+     string nombre_imagen_personaje = "prueba_aniade";
+     aniade_personaje(nombre, caracteristicas,nombre_imagen_personaje);
+     escribir_arbol_completo();
+     //Prueba para elimina_personaje
+     elimina_personaje(nombre);
+     escribir_arbol_completo();
+
      nodo_actual = arbol.root(); // Se asigna como primera jugada el nodo raiz del árbol
      while ((*nodo_actual).obtener_num_personajes() != 1) { // Recorremos el árbol hasta llegar a un nodo hoja
           // Hacemos la pregunta asociada al nodo actual jugada_actual
@@ -316,6 +326,8 @@ void QuienEsQuien::iniciar_juego(){
 
           if (respuesta) nodo_actual = nodo_actual.left();  // Respuesta afirmativa -> hijo izquierda
           else nodo_actual = nodo_actual.right();           // Respuesta negativa -> hijo derecha
+
+          //preguntas_formuladas(nodo_actual);    //Para probar preguntas_formuladas descomentar
      }
 
      // Si llegamos a un nodo hoja, identificamos el personaje
@@ -505,54 +517,70 @@ void QuienEsQuien::setModoGraph(bool m){
 }
 
 void QuienEsQuien::preguntas_formuladas (bintree<Pregunta>::node jugada) {
-     while (jugada != arbol.root()) { // Siguen quedando preguntas formuladas
-          string atributo = (*jugada.parent()).obtener_pregunta();
-          cout << atributo << " - ";
+     if (!jugada.left().null() || !jugada.right().null()) { //Si no es un nodo hoja==> si aún no se el personaje
+          cout << endl << "El personaje oculto tiene las siguientes características:" << endl;
+          while (jugada != arbol.root()) { // Siguen quedando preguntas formuladas
+               string atributo = (*jugada.parent()).obtener_pregunta();
+               cout << "\t" << atributo << " - ";
 
-          if (jugada == jugada.parent().left()) cout << "si" << endl;
-          else cout << "no" << endl;
+               if (jugada == jugada.parent().left()) cout << "si" << endl;
+               else cout << "no" << endl;
 
-          jugada = jugada.parent();     // Ascendemos un nível
+               jugada = jugada.parent();     // Ascendemos un nível
+          }
+          cout <<"\tpero aún no sé cuál es." << endl<< endl;
      }
 }
-
 void QuienEsQuien:: aniade_personaje (string nombre, vector<bool> caracteristicas,string nombre_imagen_personaje) {
      bintree<Pregunta>::node nodo_actual=arbol.root(); // Empezamos recorriendo el arbol por la raiz
 
-     for(int pos_caracteristicas = 0; pos_caracteristicas < caracteristicas.size()-1; ++pos_caracteristicas) {
-          if (caracteristicas[pos_caracteristicas])
+     for(int pos_caracteristicas=0; pos_caracteristicas<caracteristicas.size()-1; ++pos_caracteristicas) {
+          //Modifico el nodo añadiendo el nuevo personaje
+          int num_personajes = (*nodo_actual).obtener_num_personajes()+1;
+          Pregunta pregunta_nueva((*nodo_actual).obtener_pregunta(), num_personajes);
+          *nodo_actual =  pregunta_nueva;
+
+          if (caracteristicas[pos_caracteristicas]) {
                nodo_actual = nodo_actual.left(); // El personaje cumple la caracteristica ==> me voy a la izquierda
-          else
+          }
+          else {
                nodo_actual = nodo_actual.right(); // El personaje no cumple la caracteristica ==> me voy a la derecha
+          }
      }
+     // Una vez que hemos salido del bucle estamos en el padre del nodo hoja, nuestro nuevo personaje y el nodo hoja
+     // cumplen caracteristicas[caracteristicas.size()-2] pero difieren en caracteristicas[caracteristicas.size()-1]
 
      // Creamos las nuevas estructuras, nodos, que necitamos
      // 1) El nodo hoja que estaba en el arbol
      // 2) El nuevo personaje que se añade
-     Pregunta preg_hoja = *nodo_actual; // Tiene el valor de su padre
-     Pregunta preg_nueva(nombre, 1);
+     // Crear un nodo hoja con el nombre del personaje
 
-     bintree<Pregunta>::node nodo_hoja, nodo_nuevo;
-     *nodo_hoja = preg_hoja;
-     *nodo_nuevo = preg_nueva;
+     Pregunta preg_hoja = (*nodo_actual);  //Tiene el valor del padre, es un personaje que tiene igual de atributos menos
+                                         //el último. Cambiamos este personaje por la pregunta que se debe formular.
+     Pregunta preg_nueva(nombre, 1);    //Pregunta correspondiente al personaje nuevo que añadimos
 
-     // Una vez que hemos salido del bucle estamos en el padre del nodo hoja, nuestro nuevo personaje y el nodo hoja
-     // cumplen caracteristicas[caracteristicas.size()-2] pero difieren en caracteristicas[caracteristicas.size()-1]
+     bintree<Pregunta>subarbol_dcho, subarbol_izq;     // Creamos dos árboles cada uno con un único nodo
      if (caracteristicas[caracteristicas.size()-1]) {
-          // Nuevo personaje se añade a la izquierda y el nodo hoja que estaba es el hijo derecha
-          nodo_actual.left() = nodo_nuevo;
-          nodo_actual.right() = nodo_hoja;
+          subarbol_izq = bintree<Pregunta>(preg_nueva); //Nuevo personaje cumple la ultima caracteristica ==> hijo izquierda
+          subarbol_dcho = bintree<Pregunta>(preg_hoja); //El personaje que ya estaba no la cumple ==> hijo derecha
      }
      else {
-          // Nuevo personaje se añade a la derecha y el nodo hoja que estaba es el hijo izquierda
-          nodo_actual.right() = nodo_nuevo;
-          nodo_actual.left() = nodo_hoja;
+          subarbol_dcho = bintree<Pregunta>(preg_nueva); //Nuevo personaje no cumple la ultima caracteristica ==> hijo derecha
+          subarbol_izq = bintree<Pregunta>(preg_hoja); //El personaje que ya estaba si la cumple ==> hijo izquierda
      }
+
+     //Inserto los subarboles desde el nodo_actual que es el nodo que actuara como pafte
+     arbol.insert_left(nodo_actual, subarbol_izq);
+     arbol.insert_right(nodo_actual, subarbol_dcho);
 
      // 3) EL nuevo padre pues hay que modificar el atributo que antes era el nombre del personaje correspondiente
      // al nodo hijo que estaba por la nueva pregunta
-     Pregunta pregunta_padre(atributos[caracteristicas.size()-1], 2);
-     *nodo_actual = pregunta_padre;
+     Pregunta pregunta_padre(atributos[caracteristicas.size()], 2);
+     (*nodo_actual) = pregunta_padre;
+
+     // Actualizamos personajes y tablero con el nombre del nuevo personajes. ¿Al añadir un personaje se conserva el numero de atributos?
+     personajes.push_back(nombre);
+     tablero.push_back(caracteristicas);
 }
 
 void QuienEsQuien::elimina_personaje (string nombre) {
@@ -561,40 +589,82 @@ void QuienEsQuien::elimina_personaje (string nombre) {
      // Buscamos la posicion del nombre en el vector de string personajes
      bool encontrado = false;
      int pos_personaje = 0;
-     while (!encontrado) {
+     while (!encontrado && pos_personaje < personajes.size()) {
           if (personajes[pos_personaje] == nombre) encontrado = true;
           else pos_personaje++;
      }
+     if (!encontrado) return; //No hacemos nada
 
+     //Formamos el vector de caracteristicas correspondiente al personaje que borramos para luego actualizar tablero
+     vector<bool> caracteristicas;
+
+     // Nos desplazamos hasta el nodo correspondiente al personaje que queremos borrar
      for (int pos_caracteristicas = 0; pos_caracteristicas< atributos.size()-1; ++pos_caracteristicas) {
-          if (tablero[pos_personaje][pos_caracteristicas])
+          //Modifico el nodo quitando el nuevo personaje
+          int num_personajes = (*nodo_actual).obtener_num_personajes()-1;
+          Pregunta pregunta_nueva((*nodo_actual).obtener_pregunta(), num_personajes);
+          *nodo_actual =  pregunta_nueva;
+
+          if (tablero[pos_personaje][pos_caracteristicas]) {
                nodo_actual = nodo_actual.left(); // El personaje cumple la caracteristica ==> me voy a la izquierda
-          else
+               caracteristicas.push_back(true);
+          }
+          else {
                nodo_actual = nodo_actual.right(); // El personaje no cumple la caracteristica ==> me voy a la derecha
+               caracteristicas.push_back(false);
+          }
      }
 
      // Creamos las nuevas estructuras, nodos, que necitamos
      // 1) El nombre asociado al nodo hoja que se mantiene en el arbol y que reemplaza al padre
      string nombre_reemplazo;
 
-     // Una vez que hemos salido del bucle estamos en el padre del nodo hoja que queremos borrar
+     // Una vez que hemos salido del bucle nos desplazamos hacia el padre del nodo hoja que queremos borrar
+     nodo_actual = nodo_actual.parent();
      if (tablero[pos_personaje][atributos.size()-1]) {
-          // El personaje que borramos cumplia la ulrima caracteristicas==> hijo izquierda
-          nombre_reemplazo = (*nodo_actual.right()).obtener_pregunta();
-          nodo_actual.left().remove();  // Personaje que se quiere borrar
-          nodo_actual.right().remove(); // Persnaje que reemplaza al padre
+          // El personaje que borramos cumplia la ultima caracteristica==> hijo izquierda
+          nombre_reemplazo = (*nodo_actual.right()).obtener_personaje(); //Obtenemos el nombre de su hermano==> hijo dcha
      }
      else {
-          // El perosnaje que borramos no cumplia la ulrima caracteristicas==> hijo derecha
-          nombre_reemplazo = (*nodo_actual.left()).obtener_pregunta();
-          nodo_actual.right().remove(); // Personaje que se quiere borrar
-          nodo_actual.left().remove();  // Persnaje que reemplaza al padre
+          // El personaje que borramos no cumplia la ultima caracteristica==> hijo derecha
+          nombre_reemplazo = (*nodo_actual.left()).obtener_personaje(); //Obtenemos el nombre de su hermano==> hijo izq
      }
+     nodo_actual.left().remove();  // Personaje que se quiere borrar
+     nodo_actual.right().remove(); // Personaje que reemplaza al padre
 
-     // 3) EL nuevo padre pues hay que modificar el atributo que antes era la pregunta por el nombre del personaje
+     // 3) El nuevo padre pues hay que modificar el atributo que antes era la pregunta por el nombre del personaje
      // correspondiente al nodo hijo que sobrevive en el arbol
      Pregunta pregunta_padre(nombre_reemplazo, 1);
      *nodo_actual = pregunta_padre;
+     if (nodo_actual.parent().left().null()) cout << "nulo" << endl;
+     /*bintree<Pregunta>subarbol(pregunta_padre);
+
+     // Buscamos la posicion del nombre_reemplazo en el vector de string personajes
+     encontrado = false;
+     pos_personaje = 0;
+     while (!encontrado && pos_personaje < personajes.size()) {
+          if (personajes[pos_personaje] == nombre) nombre_reemplazo = true;
+          else pos_personaje++;
+     }
+
+     if (tablero[pos_personaje][atributos.size()-2]) {//Personaje cumple la ultima caracteristica==>hizo izquierda
+          arbol.insert_left(nodo_actual, subarbol);
+     }
+     else {//Personaje no cumple la ultima caracteristica==>hizo derecha
+          arbol.insert_right(nodo_actual, subarbol);
+     }*/
+
+     //nodo_actual = nodo_actual.parent();
+     //cout <<*nodo_actual.left()<< endl;
+     //cout <<*nodo_actual.right()<<endl; // DA CORE
+
+     // Actualizamos personajes y tablero con el nombre del nuevo personajes. ¿Al añadir un personaje se conserva el numero de atributos?
+     personajes.erase(personajes.begin() + pos_personaje);
+
+     // Encuentra y elimina la fila que coincide con 'caracteristicas'
+     auto it = std::find(tablero.begin(), tablero.end(), caracteristicas);
+     if (it != tablero.end())  tablero.erase(it); // Elimina la fila encontrada
+
 }
 
 void QuienEsQuien::MejorPregunta(const vector<bool>& personajes_restantes, int indice_atributo) {
