@@ -305,6 +305,7 @@ void QuienEsQuien::iniciar_juego(){
           v.show();
      }
 
+     /*
      //Prueba de aniade_personaje
      string nombre="prueba";
      cout << atributos[0] << atributos[1] << atributos[2] << atributos[3] << endl;
@@ -314,10 +315,9 @@ void QuienEsQuien::iniciar_juego(){
      escribir_arbol_completo();
      cout << endl;
 
-
      //Prueba para elimina_personaje
      elimina_personaje(nombre);
-     escribir_arbol_completo();
+     escribir_arbol_completo();*/
 
      nodo_actual = arbol.root(); // Se asigna como primera jugada el nodo raiz del árbol
      while ((*nodo_actual).obtener_num_personajes() != 1) { // Recorremos el árbol hasta llegar a un nodo hoja
