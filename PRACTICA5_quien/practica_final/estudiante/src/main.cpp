@@ -24,7 +24,7 @@ int main(int argc, char * argv[]){
 
     }else if(argc== 2 ){
 
-               string parametroAleatorio = "aleatorio";
+    	string parametroAleatorio = "aleatorio";
 		if(argv[1]== parametroAleatorio){
 			cout << "Creando un QuienEsQuien aleatorio"<< endl;
 			int numero_de_personajes;
@@ -96,7 +96,7 @@ int main(int argc, char * argv[]){
 	
 	cout << "=========== Arbol en crudo ===========" << endl;
 	quienEsQuien.escribir_arbol_completo();
-	
+
 	cout << "Profundidad promedio de las hojas del arbol: ";
 	cout << quienEsQuien.profundidad_promedio_hojas() << endl; 
 	cout << "======================================" << endl << endl << endl;

@@ -92,7 +92,19 @@ private:
 
 
 	/**
-	  * @brief Esta es una propuesta de cabecera de la funci�n para crear el arbol.
+	  * @brief Funcion auxiliar para crear el arbol de preguntas.
+	  *
+	  * @param atributos vector de atring que contiene los atributos por los que se pregunta.
+	  * @param indice_atributo indica la posicion del atributo en el vector de atributos de la pregunta actual.
+	  * @param personajes vector de string con los nombres de los personajes.
+	  * @param personajes_restantes vector booleano en el que cada posicion se corresponde con la posicion en el
+	  *        vector de personajes, indicandonos si el correspondiente personaje sigue vivo.
+	  *        personajes_restantes[i] == true si personaje[i] sigue vivo
+	  *        personajes_restantes[i] == false si personaje[i] no sigue vivo
+	  * @param tablero matriz de booleanos que nos indica si para un personaje la pregunta relacionada con un atributo
+	  *        es afirmativa(true) o negativa(false).
+	  *        tablero[i][indice_atributo] == true si personaje[i] tiene atributo[indice_atributo]
+	  *        tablero[i][indice_atributo] == false si personaje[i] no tiene atributo[indice_atributo]
 	  */
 	 bintree<Pregunta> crear_arbol(vector<string> atributos,
                                     int indice_atributo,
@@ -223,11 +235,13 @@ public:
 	  *
 	  * @param profundidad profundidad que tiene hasta el momento
 	  * @param nivel_actual nodo actual en el que nos encontramos
-	  * @return vector de tipo int donde en cada posición se recoge la profundidad de una hoja distinta del arbol
+	  * @param prof_hojas refrencia a un vector de tipo int donde en cada posición se recoge la profundidad
+	  *        de una hoja distinta del arbol
+	  * @return void
 	  *
 	  * @pre El arbol de preguntas debe haber sido construido previamente.
 	  */
-	vector<int> profundidad_hojas(int& profundidad, bintree<Pregunta>::node nivel_actual);
+	void profundidad_hojas(int profundidad, bintree<Pregunta>::node nivel_actual, vector<int>& prof_hojas);
 
 
 	/**
@@ -343,7 +357,6 @@ private:
 	*
 	*/
 	void MejorPregunta(const vector<bool>& personajes_restantes, int indice_atributo);
-
 };
 
 #endif

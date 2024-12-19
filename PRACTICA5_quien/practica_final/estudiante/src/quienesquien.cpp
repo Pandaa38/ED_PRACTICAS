@@ -147,7 +147,6 @@ istream& operator >>  (istream& is, QuienEsQuien &quienEsQuien) {
                quienEsQuien.personajes_images.push_back(imagen_personaje);
           }
      }
-
      quienEsQuien.mostrar_estructuras_leidas();
      quienEsQuien.arbol = quienEsQuien.crear_arbol();
      quienEsQuien.tg=nullptr; //puntero al tablero grafico
@@ -226,32 +225,34 @@ vector<bool> convertir_a_vector_bool(int n, int digitos) {
      return ret;
 }
 
-/**
-* @brief Esta es una propuesta de cabecera de la funcion para crear el arbol.
-*/
 bintree<Pregunta> QuienEsQuien::crear_arbol (vector<string> atributos,
                                              int indice_atributo,
                                              vector<string> personajes,
                                              vector<bool> personajes_restantes,
                                              vector<vector<bool>> tablero) {
      bintree<Pregunta> arbol;
-     // Son los personales con valor true en el vector de booleanos personajes_restantes
+     // Son los personajes con valor true en el vector de booleanos personajes_restantes
      int num_personajes = count(personajes_restantes.begin(),personajes_restantes.end(),true);
+
+     if (num_personajes == 0) return arbol;  //Si no quedan más personajes devuelvo un arbol vacio
 
      // Caso en el que solo me queda un nodo hoja
      int pos_personaje = -1;
      bool encontrado = false;
-     if (num_personajes == 1) {   // Si solo me queda un perosnaje se trata de un nodo hoja
+     if (num_personajes == 1) {   // Si solo me quedan un personaje es un nodo hoja
           for(int i = 0; i < personajes_restantes.size() && !encontrado; ++i) {
                if (personajes_restantes[i]) {   // Extraigo su posición para conseguir el
                     pos_personaje = i;          // nombre del personaje
                     encontrado = true;
                }
+               personajes_restantes[i] = false;
           }
+
           // Crear un nodo hoja con el nombre del personaje
-          Pregunta hoja(personajes[pos_personaje], num_personajes);
-          arbol.insert_left(hoja, arbol);
-          return arbol;
+          Pregunta preg_hoja(personajes[pos_personaje], num_personajes);
+
+          arbol = bintree<Pregunta>(preg_hoja); // Crear un árbol con un único nodo
+          return arbol; // Retornar el árbol hoja
      }
 
      // Inicializo los siguientes vectores booleanos para separar los personajes según cumplan el atributo actual o no
@@ -266,7 +267,6 @@ bintree<Pregunta> QuienEsQuien::crear_arbol (vector<string> atributos,
      }
 
      MejorPregunta(personajes_cumplen, indice_atributo);
-
      // Crear el nodo actual con el atributo y el número total de personajes en esta rama
      Pregunta nodo_actual(atributos[indice_atributo], num_personajes);
      arbol = bintree<Pregunta>(nodo_actual);
@@ -314,12 +314,12 @@ void QuienEsQuien::iniciar_juego(){
           cin >> respuesta;
 
           if (respuesta) nodo_actual = nodo_actual.left();  // Respuesta afirmativa -> hijo izquierda
-          else nodo_actual = nodo_actual.right();              // Respuesta negativa -> hijo derecha
+          else nodo_actual = nodo_actual.right();           // Respuesta negativa -> hijo derecha
      }
 
      // Si llegamos a un nodo hoja, identificamos el personaje
      // Los nodos hoja tienen como atributo el nombre del personaje según crear_arbol()
-     cout << "¡Ya lo sé! Tu personaje es: " << (*nodo_actual).obtener_pregunta() << std::endl;
+     cout << "¡Ya lo sé! Tu personaje es: " << (*nodo_actual).obtener_personaje() << std::endl;
 
      nodo_actual = arbol.root(); // Reiniciamos la jugada_actual al nodo raíz
 
@@ -337,20 +337,24 @@ void QuienEsQuien::iniciar_juego(){
 }	
 
 set<string> QuienEsQuien::informacion_jugada(bintree<Pregunta>::node jugada_actual) {
-     string atributo_actual = (*jugada_actual).obtener_pregunta(); // Obtengo el atributo asociado a la pregunta
+     // Caso 1: Nodo nulo
+     if (jugada_actual.null()) return {}; // Devolver conjunto vacío
 
-     bool encontrado = false;
-     int pos_atributo = 0;
-     while (pos_atributo < atributos.size() && !encontrado) {
-          if (atributos[pos_atributo] == atributo_actual) encontrado = true;
-          else pos_atributo++;
+     // Caso 2: Nodo hoja asociado (tenemos un único personaje)
+     if ((*jugada_actual).obtener_num_personajes() == 1) {
+          set<string> personajes_levantados;
+          personajes_levantados.insert((*jugada_actual).obtener_pregunta()); // Insertar el personaje
+          return personajes_levantados;
      }
 
-     set<string> personajes_levantados;
-     for (int i = 0; i < personajes.size(); ++i)
-          if (tablero[i][pos_atributo]) personajes_levantados.insert(personajes[i]);
+     // Caso 3: Nodo intermedio
+     // Llamadas recursivas para los subárboles izquierdo y derecho
+     set<string> personajes_izquierdo = informacion_jugada(jugada_actual.left());
+     set<string> personajes_derecho = informacion_jugada(jugada_actual.right());
 
-     return personajes_levantados;
+     // Combinar los resultados de ambos conjuntos
+     personajes_izquierdo.insert(personajes_derecho.begin(), personajes_derecho.end());
+     return personajes_izquierdo;
 }
 
 void escribir_esquema_arbol(ostream& ss, const bintree <Pregunta>& a,
@@ -378,32 +382,25 @@ void QuienEsQuien::escribir_arbol_completo() const{
 // nodo_actual incializado a la raiz
 // a lo mejor hay que usar el atrbibuto propio de la clase jugada_actual
 void QuienEsQuien::eliminar_nodos_redundantes_recursiva(bintree<Pregunta>::node nodo_actual) {
-     // Verificar si el nodo es una hoja, no tiene ningún hijo
-     if (nodo_actual.left().null() && nodo_actual.right().null()) {
-          return;  // No hace falta seguir procesando
-     }
+     if (nodo_actual.null()) return;  // Si el nodo es nulo, no hay nada que hacer
 
-     // Mientras el nodo tenga hijos, seguimos recorriendo el árbol
-     if (!nodo_actual.left().null()) {
-          eliminar_nodos_redundantes_recursiva(nodo_actual.left());
-     }
-     if (!nodo_actual.right().null()) {
-          eliminar_nodos_redundantes_recursiva(nodo_actual.right());
-     }
+     // Seguimos recorriendo los nodos que tinen hijos
+     if (!nodo_actual.left().null()) eliminar_nodos_redundantes_recursiva(nodo_actual.left());
+     if (!nodo_actual.right().null()) eliminar_nodos_redundantes_recursiva(nodo_actual.right());
 
-     // Hemos llegado a un nodo redundante, esto es un nodo que tiene un solo hijo
-     bintree<Pregunta> subarbol;   // Subarbol que reemplaza al nodo redundante
-
-     // nodo_actual no tiene hijo izquierda
-     if (nodo_actual.left().null()) {
-          arbol.prune_right(nodo_actual, subarbol); // Podamos lo que hay a su derecha
-          arbol.replace_subtree(nodo_actual, subarbol, nodo_actual.right());
+     // Si el nodo tiene un solo hijo, hemos llegado a un nodo redundante
+     bintree<Pregunta> subarbol;
+     if (nodo_actual.left().null() && !nodo_actual.right().null()) {
+          // No tiene hijo izquierdo ==> colgamos del padre el subárbol derecho
+          subarbol.assign_subtree(arbol, nodo_actual.right());
+          arbol.insert_left(nodo_actual.parent(), subarbol); // Reemplazar el nodo actual por el subárbol derecho
      }
-     // nodo_actual no tiene hijo derecha
-     else if (nodo_actual.right().null()) {
-          arbol.prune_left(nodo_actual, subarbol); // Podamos lo que hay a su izquierda
-          arbol.replace_subtree(nodo_actual, subarbol, nodo_actual.left());
+     else if (!nodo_actual.left().null() && nodo_actual.right().null()) {
+          // No tiene hijo derecha ==> colgamos del padre el subárbol izquierdo
+          subarbol.assign_subtree(arbol, nodo_actual);
+          arbol.insert_right(nodo_actual.parent(), subarbol);
      }
+     // Si tiene ambos hijos, no es redundante, así que no hacemos nada
 }
 
 // La he creado para no modificar el main
@@ -412,35 +409,39 @@ void QuienEsQuien::eliminar_nodos_redundantes() {
      eliminar_nodos_redundantes_recursiva(arbol.root());
 }
 
-// Calcula la profundidad de todos los nodos hijos
-vector<int> QuienEsQuien::profundidad_hojas(int& profundidad, bintree<Pregunta>::node nivel_actual) {
-     vector<int> prof_hojas;
 
-     if ((*nivel_actual).obtener_num_personajes() == 1) { // Es un hijo
-          //profundidad--;
-          prof_hojas.push_back(profundidad);
+void QuienEsQuien::profundidad_hojas(int profundidad, bintree<Pregunta>::node nivel_actual, vector<int>& prof_hojas) {
+     if (nivel_actual.null()) return; //Si el nodo es nulo, terminamos
+
+     if (nivel_actual.left().null() && nivel_actual.right().null()) { //Es un nodo hoja
+          prof_hojas.push_back(profundidad); // Es una hojo
+          return;
      }
-     else { // Seguimos recorriendo la rama
-          profundidad++;
-          profundidad_hojas(profundidad, nivel_actual.left());
-          profundidad_hojas(profundidad, nivel_actual.right());
-     }
-     return prof_hojas;
+
+     // Seguimos recorriendo las ramas, incrementando la profundidad
+     profundidad++;
+     profundidad_hojas(profundidad, nivel_actual.left(), prof_hojas);
+     profundidad_hojas(profundidad, nivel_actual.right(), prof_hojas);
 }
 
 float QuienEsQuien::profundidad_promedio_hojas() {
      bintree<Pregunta>::node nivel_actual = arbol.root();
+     vector<int> prof_hojas;
 
-     float profundidad_promedio = 0;
-     int profundidad = 0;
+     // Comenzamos desde la raiz y con una profundidad=0;
+     profundidad_hojas(0, nivel_actual, prof_hojas);
 
-     vector<int> prof_hojas = profundidad_hojas(profundidad, nivel_actual);
-     vector<int>::iterator it;
-     for (it=prof_hojas.begin(); it!=prof_hojas.end(); ++it) // Sumo todas las profundidades calculadas
-          profundidad_promedio += (*it);
+     // Si no hay hojas en el árbol, retornamos 0
+     if (prof_hojas.empty()) return 0.0;
 
-     return profundidad_promedio/prof_hojas.size();       // Divido las profundidades entre num_hijos
-}
+     // Calculamos el promedio de las profundidades
+     float suma_prof = 0.0;
+     for (vector<int>::iterator it=prof_hojas.begin(); it!=prof_hojas.end(); ++it) {
+          suma_prof += (*it);     // Sumo todas las profundidades
+     }
+     //cout <<"suma_prof:" << suma_prof << endl;
+     return static_cast<float>(suma_prof)/prof_hojas.size();  // Divido las profundidades entre num_hijos ==>
+}                                                             // Promedio de profundidades
 
 /**
 * @brief Genera numero enteros positivos aleatorios en el rango [min,max].
