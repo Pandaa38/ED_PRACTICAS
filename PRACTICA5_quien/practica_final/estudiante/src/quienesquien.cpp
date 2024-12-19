@@ -558,7 +558,7 @@ void QuienEsQuien:: aniade_personaje (string nombre, vector<bool> caracteristica
           else {
                nodo_actual = nodo_actual.right(); // El personaje no cumple la caracteristica ==> me voy a la derecha
           }
-          pos_caracteristicas++;
+          ++pos_caracteristicas;
      }
 
      // Una vez que hemos salido del bucle estamos en el padre del nodo hoja, nuestro nuevo personaje y el nodo hoja
@@ -610,7 +610,7 @@ void QuienEsQuien::elimina_personaje (string nombre) {
      vector<bool> caracteristicas;
      int pos_caracteristicas = 0;
      // Nos desplazamos hasta el nodo correspondiente al personaje que queremos borrar
-     while (pos_caracteristicas< atributos.size()-1  && !nodo_actual.left().null() || !nodo_actual.right().null()){
+     while (pos_caracteristicas< atributos.size() && !nodo_actual.left().null() || !nodo_actual.right().null()){
 
           //Modifico cada nodo quitando el personaje
           Pregunta pregunta_nueva((*nodo_actual).obtener_pregunta(), (*nodo_actual).obtener_num_personajes()-1);
