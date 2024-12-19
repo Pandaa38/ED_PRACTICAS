@@ -241,7 +241,7 @@ bintree<Pregunta> QuienEsQuien::crear_arbol (vector<string> atributos,
           int pos_personaje = 0;
           bool encontrado = false;
 
-          while (!encontrado) {
+          while (!encontrado && pos_personaje < personajes_restantes.size()) {
                if(personajes_restantes[pos_personaje]) encontrado = true;
                else pos_personaje++;
           }
@@ -253,7 +253,7 @@ bintree<Pregunta> QuienEsQuien::crear_arbol (vector<string> atributos,
 
                arbol = bintree<Pregunta>(preg_hoja); // Crear un árbol con un único nodo
           }
-          return arbol; // Retornar el árbol hoja
+          return arbol; // Retornar el árbol hoja o vacio en caso de que no se haya encontrado
      }
 
      // Inicializo los siguientes vectores booleanos para separar los personajes según cumplan el atributo actual o no
