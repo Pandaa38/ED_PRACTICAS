@@ -774,8 +774,5 @@ void QuienEsQuien::MejorPregunta(const vector<bool>& personajes_restantes, int i
 
      // Como solución modificamos el orden de atributos de manera que el mejor atributo, ocupe la posicon siguiente en
      // el vector a la pregunta realizada con anteorioridad. Por consecuente tambien se modifican las filas del tablero
-     //atributos[pos_mejor_atributo] = atributos[indice_atributo];
-     //atributos[indice_atributo] = mejor_atributo;
-
-     reorganizar_tablero( pos_mejor_atributo, indice_atributo);  // Modificamos this->tablero y this->atributos
+     reorganizar_tablero(pos_mejor_atributo, indice_atributo);  // Modificamos this->tablero y this->atributos
 }
