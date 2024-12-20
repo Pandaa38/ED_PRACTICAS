@@ -105,6 +105,9 @@ private:
 	  *        es afirmativa(true) o negativa(false).
 	  *        tablero[i][indice_atributo] == true si personaje[i] tiene atributo[indice_atributo]
 	  *        tablero[i][indice_atributo] == false si personaje[i] no tiene atributo[indice_atributo]
+	  *
+	  * @return arbol de preguntas.
+	  * @post se modifica this->tablero y this->atributos.
 	  */
 	 bintree<Pregunta> crear_arbol(vector<string> atributos,
                                     int indice_atributo,
@@ -340,20 +343,32 @@ public:
 	void elimina_personaje (string nombre);
 
 private:
+	/**
+	* @brief Reorganiza el tablero y los atributos del objeto implicito al encontrar una pregunta que sea mejor
+	* de realizar.
+	*
+	* @param pos_mejor_atributo posicion del vector de atributos, marca el atributo correspondiente a la mejor pregunta.
+	* @param indice_atributo posicion del vector de atributos, marca el inicio del vector a partir del cuál
+	*        hay preguntas que no se han realizado.
+	*
+	* @return void
+	* @post modifica el orden del this->atributos y this>tablero
+	*
+	*/
+	void reorganizar_tablero(int pos_mejor_atributo, int indice_atributo);
 
 	/**
 	* @brief Escoge la mejor pregunta sabiendo las preguntas que ya se han realizado.
 	*  La mejor pregunta será aquella cuyo vector correspondiente a atributos (columnas) de tablero
 	*  tengán el numero de 0 (false) y 1(true) mas equiparado. Esto ocurre cuando el numero de true o de false
 	*  es igual a num_personajes_vivos/2.
-
 	*
 	* @param personajes_restantes vector booleano que nos indica que personaje sigue vivo en la rama
 	* @param indice_atributo posicion del vector de atributos, marca el inicio del vector a partir del cuál
 	*        hay preguntas que no se han realizado.
 	*
 	* @return void
-	* @post modifica el orden del vector<string> atributos del objeto implicito
+	* @post modifica el orden del this->atributos y this>tablero
 	*
 	*/
 	void MejorPregunta(const vector<bool>& personajes_restantes, int indice_atributo);

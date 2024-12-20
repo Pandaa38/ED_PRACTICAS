@@ -256,6 +256,10 @@ bintree<Pregunta> QuienEsQuien::crear_arbol (vector<string> atributos,
           return arbol; // Retornar el árbol hoja o vacio en caso de que no se haya encontrado
      }
 
+     MejorPregunta(personajes_restantes, indice_atributo);   // Modifica this->atributos y this->tablero
+     tablero = this->tablero;                                // con el mejor orden
+     atributos = this->atributos;
+
      // Inicializo los siguientes vectores booleanos para separar los personajes según cumplan el atributo actual o no
      vector<bool> personajes_cumplen(personajes_restantes.size(), false);
      vector<bool> personajes_no_cumplen(personajes_restantes.size(), false);
@@ -267,7 +271,6 @@ bintree<Pregunta> QuienEsQuien::crear_arbol (vector<string> atributos,
           }
      }
 
-     MejorPregunta(personajes_cumplen, indice_atributo);
      // Crear el nodo actual con el atributo y el número total de personajes en esta rama
      Pregunta nodo_actual(atributos[indice_atributo], num_personajes);
      arbol = bintree<Pregunta>(nodo_actual);
@@ -320,7 +323,13 @@ void QuienEsQuien::iniciar_juego(){
      escribir_arbol_completo();*/
 
      nodo_actual = arbol.root(); // Se asigna como primera jugada el nodo raiz del árbol
-     while (!(*nodo_actual).es_personaje()) { // Recorremos el árbol hasta llegar a un nodo hoja
+     while ((*nodo_actual).obtener_num_personajes() != 1) { // Recorremos el árbol hasta llegar a un nodo hoja
+          //Prueba informacion_jugada
+          /*set<string> personajes_restantes = informacion_jugada(nodo_actual);
+          cout << "Personajes restantes:\n";
+          for (const auto& personaje : personajes_restantes) {
+               cout << "- " << personaje << "\n";
+          }*/
           // Hacemos la pregunta asociada al nodo actual jugada_actual
           std::cout << "Pregunta: " << (*nodo_actual).obtener_pregunta() << std::endl;
           string resp;
@@ -397,31 +406,64 @@ void QuienEsQuien::escribir_arbol_completo() const{
 }
 
 
-// nodo_actual incializado a la raiz
-// a lo mejor hay que usar el atrbibuto propio de la clase jugada_actual
 void QuienEsQuien::eliminar_nodos_redundantes_recursiva(bintree<Pregunta>::node nodo_actual) {
-     if (nodo_actual.null()) return;  // Si el nodo es nulo, no hay nada que hacer
+    if (nodo_actual.null()) return; // Si el nodo es nulo, no hacemos nada
 
-     // Seguimos recorriendo los nodos que tinen hijos
-     if (!nodo_actual.left().null()) eliminar_nodos_redundantes_recursiva(nodo_actual.left());
-     if (!nodo_actual.right().null()) eliminar_nodos_redundantes_recursiva(nodo_actual.right());
+    // Si tiene ambos hijos, no es redundante, seguimos recorriendo el arbol
+    if (!nodo_actual.left().null() && !nodo_actual.right().null()) {
+        eliminar_nodos_redundantes_recursiva(nodo_actual.left());
+        eliminar_nodos_redundantes_recursiva(nodo_actual.right());
+    }
 
-     // Si el nodo tiene un solo hijo, hemos llegado a un nodo redundante
      bintree<Pregunta> subarbol;
+     bintree<Pregunta> rama_izq, rama_dcha;
+     bintree<Pregunta>::node siguiente_nodo;
+
+     // Nodo con un solo hijo derecha, hemos encontrado un nodo redundante
      if (nodo_actual.left().null() && !nodo_actual.right().null()) {
-          // No tiene hijo izquierdo ==> colgamos del padre el subárbol derecho
-          subarbol.assign_subtree(arbol, nodo_actual.right());
-          arbol.insert_left(nodo_actual.parent(), subarbol); // Reemplazar el nodo actual por el subárbol derecho
+          siguiente_nodo = nodo_actual.right();
+          eliminar_nodos_redundantes_recursiva(siguiente_nodo); // Continuar con el nuevo nodo
+
+          subarbol = bintree<Pregunta>(*siguiente_nodo); // Asignamos la nueva raiz del subarbol
+
+          // Conseguimos las dos ramas que cuelgan del nodo que va a sustituir el nodo que era redundante
+          arbol.prune_left(siguiente_nodo, rama_izq);
+          arbol.prune_right(siguiente_nodo, rama_dcha);
+
+          // Cosntruimos el subarbol con las ramas que hemos podado
+          subarbol.insert_left(subarbol.root(), rama_izq);
+          subarbol.insert_right(subarbol.root(), rama_dcha);
+
+          // Sustituir nodo redundante con el subárbol, que ya tiene como padre el hijo derecha
+          if (!nodo_actual.parent().null()) {
+               if (nodo_actual == nodo_actual.parent().right()) arbol.insert_right(nodo_actual.parent(), subarbol);
+               else arbol.insert_left(nodo_actual.parent(), subarbol);
+          }
      }
-     else if (!nodo_actual.left().null() && nodo_actual.right().null()) {
-          // No tiene hijo derecha ==> colgamos del padre el subárbol izquierdo
-          subarbol.assign_subtree(arbol, nodo_actual);
-          arbol.insert_right(nodo_actual.parent(), subarbol);
+
+     // Nodo con un solo hijo izquierda, hemos encontrado un nodo redundante
+     if (!nodo_actual.left().null() && nodo_actual.right().null()) {
+          siguiente_nodo = nodo_actual.left();
+          eliminar_nodos_redundantes_recursiva(siguiente_nodo); // Continuar con el nuevo nodo
+
+          subarbol = bintree<Pregunta>(*siguiente_nodo); // Asignamos la nueva raiz del subarbol
+
+          // Conseguimos las dos ramas que cuelgan del nodo que va a sustituir el nodo que era redundante
+          arbol.prune_left(siguiente_nodo, rama_izq);
+          arbol.prune_right(siguiente_nodo, rama_dcha);
+
+          // Cosntruimos el subarbol con las ramas que hemos podado
+          subarbol.insert_left(subarbol.root(), rama_izq);
+          subarbol.insert_right(subarbol.root(), rama_dcha);
+
+          // Sustituir nodo redundante con el subárbol, que ya tiene como padre el hijo izquierda
+          if (!nodo_actual.parent().null()) {
+               if (nodo_actual == nodo_actual.parent().right()) arbol.insert_right(nodo_actual.parent(), subarbol);
+               else arbol.insert_left(nodo_actual.parent(), subarbol);
+          }
      }
-     // Si tiene ambos hijos, no es redundante, así que no hacemos nada
 }
 
-// La he creado para no modificar el main
 void QuienEsQuien::eliminar_nodos_redundantes() {
      // Llamamos a la función recursiva para empezar desde la raíz del árbol
      eliminar_nodos_redundantes_recursiva(arbol.root());
@@ -457,7 +499,7 @@ float QuienEsQuien::profundidad_promedio_hojas() {
      for (auto it:prof_hojas) {
           suma_prof += it;     // Sumo todas las profundidades
      }
-     //cout <<"suma_prof:" << suma_prof << endl;
+
      return static_cast<float>(suma_prof)/prof_hojas.size();  // Divido las profundidades entre num_hijos ==>
 }                                                             // Promedio de profundidades
 
@@ -687,38 +729,53 @@ void QuienEsQuien::elimina_personaje (string nombre) {
      if (it != tablero.end())  tablero.erase(it); // Elimina la fila encontrada
 }
 
+void QuienEsQuien::reorganizar_tablero(int pos_mejor_atributo, int indice_atributo) {
+     swap(atributos[indice_atributo], atributos[pos_mejor_atributo]);
+     for (auto& fila : tablero)  // Intercambiar las columnas correspondientes en el tablero
+          swap(fila[indice_atributo], fila[pos_mejor_atributo]);
+}
+
 void QuienEsQuien::MejorPregunta(const vector<bool>& personajes_restantes, int indice_atributo) {
      // Notemos que solo se contabilizaran las posiciones de los personajes que aún queden vivos
-     // personajes_restantes[i] = true, i poisicion del perosnaje que sigue vive en el vector<string> personajes
+     // personajes_restantes[i] = true, i poisicion del personaje que sigue vive en el vector<string> personajes
      int num_personajes_vivos = count(personajes_restantes.begin(), personajes_restantes.end(), true);
-     if (num_personajes_vivos % 2 == 1) num_personajes_vivos++;
 
-     int contador = 0; // Contabiliza los trues del tablero dada una pregunta y los personajes que quedan
+     int contador = 0; // Contabiliza los trues del tablero dada una pregunta teniendo en cuenta solo los personajes que quedan
      int mejor_contador = 0;
      string mejor_atributo;   // Mejor atributo por el que preguntar
+     int pos_mejor_atributo;  // Posiicon ocupada por el mejor atributo por el que preguntar
 
-     // No haria falta seguir en el bucle si encontramos un contador de trues igual a num_personajes_vivos/2
-     int pos_atrib = indice_atributo;   // Controlamos no repetir preguntasd
-     while (pos_atrib < atributos.size() && mejor_contador!= num_personajes_vivos/2) {
+     int pos_atributo = indice_atributo;   // Controlamos no repetir preguntas
+     bool mejor_preguntada_encontrada = false;
+     while (pos_atributo < atributos.size() && !mejor_preguntada_encontrada) {
           for (int j=0; j < personajes.size(); j++) {
                // Mientras que el personaje siga vivo y tablero sea true
-               if (personajes_restantes[j] && tablero[j][pos_atrib])
-                    contador++;
+               if (personajes_restantes[j] && tablero[j][pos_atributo]) contador++;
           }
+          if (contador == 1) return; // Solo queda un personaje vivo que verifica el atributo que toca
 
-          if (contador > mejor_contador && contador <= num_personajes_vivos/2) {
+          if (contador > mejor_contador && contador < num_personajes_vivos) {
                //Hemos encontrado la mejor pregunta
-               mejor_atributo = atributos[pos_atrib];
+               pos_mejor_atributo =  pos_atributo;
+               mejor_atributo = atributos[pos_mejor_atributo];
                mejor_contador = contador;
           }
-          else {
-               pos_atrib++; // Sigo por el siguiente
+
+          // No haria falta seguir en el bucle si encontramos un contador de trues/falses igual a num_personajes_vivos/2
+          mejor_preguntada_encontrada = mejor_contador== num_personajes_vivos/2 ||
+                                        (num_personajes_vivos-mejor_contador) == num_personajes_vivos/2;
+
+          if (!mejor_preguntada_encontrada) {
+               pos_atributo++; // Sigo por el siguiente
                contador = 0;  // actualizo contador para la siguiente vuelta
           }
      }
+     if (mejor_atributo.empty()) return;     // Si no se encontro mejor_atributo no hacer nada
 
-     // Como solución modificamos el orden de atributos de manera que el mejor atributo, ocupe la posiicon siguiente en
-     // el vector a la pregunta realizada con anteorioridad
-     atributos[pos_atrib] = atributos[indice_atributo];
-     atributos[indice_atributo] = mejor_atributo;
+     // Como solución modificamos el orden de atributos de manera que el mejor atributo, ocupe la posicon siguiente en
+     // el vector a la pregunta realizada con anteorioridad. Por consecuente tambien se modifican las filas del tablero
+     //atributos[pos_mejor_atributo] = atributos[indice_atributo];
+     //atributos[indice_atributo] = mejor_atributo;
+
+     reorganizar_tablero( pos_mejor_atributo, indice_atributo);  // Modificamos this->tablero y this->atributos
 }
