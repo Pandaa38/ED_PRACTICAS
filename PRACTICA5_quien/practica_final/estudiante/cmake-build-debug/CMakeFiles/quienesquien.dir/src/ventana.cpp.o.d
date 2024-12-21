@@ -1,7 +1,7 @@
 CMakeFiles/quienesquien.dir/src/ventana.cpp.o: \
- /home/maria/Carrera/Segundo/1cuatri/ED/ED_Repositorios/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/ventana.cpp \
+ /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/ventana.cpp \
  /usr/include/stdc-predef.h \
- /home/maria/Carrera/Segundo/1cuatri/ED/ED_Repositorios/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/./include/ventana.h \
+ /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/./include/ventana.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -283,7 +283,7 @@ CMakeFiles/quienesquien.dir/src/ventana.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
- /home/maria/Carrera/Segundo/1cuatri/ED/ED_Repositorios/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/./include/tablerografico.h \
+ /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/./include/tablerografico.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPixmap \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QIcon \
@@ -331,7 +331,7 @@ CMakeFiles/quienesquien.dir/src/ventana.cpp.o: \
  /usr/include/c++/13/condition_variable \
  /usr/include/c++/13/bits/atomic_futex.h \
  /usr/include/c++/13/bits/std_thread.h \
- /home/maria/Carrera/Segundo/1cuatri/ED/ED_Repositorios/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/./include/consola.h \
+ /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/./include/consola.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPlainTextEdit \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qplaintextedit.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextedit.h \

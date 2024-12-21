@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/maria/Carrera/Segundo/1cuatri/ED/ED_Repositorios/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug"
+			"value" : "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -559,7 +559,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/maria/Carrera/Segundo/1cuatri/ED/ED_Repositorios/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -619,7 +619,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/maria/Carrera/Segundo/1cuatri/ED/ED_Repositorios/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante"
+			"value" : "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -1531,7 +1531,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/maria/Carrera/Segundo/1cuatri/ED/ED_Repositorios/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug"
+			"value" : "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug"
 		},
 		{
 			"name" : "QuienesQuien_IS_TOP_LEVEL",
@@ -1555,7 +1555,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/maria/Carrera/Segundo/1cuatri/ED/ED_Repositorios/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante"
+			"value" : "/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

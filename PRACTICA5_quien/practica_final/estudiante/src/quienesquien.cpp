@@ -323,7 +323,7 @@ void QuienEsQuien::iniciar_juego(){
      escribir_arbol_completo();*/
 
      nodo_actual = arbol.root(); // Se asigna como primera jugada el nodo raiz del árbol
-     while ((*nodo_actual).obtener_num_personajes() != 1) { // Recorremos el árbol hasta llegar a un nodo hoja
+     while (!(*nodo_actual).es_personaje()) { // Recorremos el árbol hasta llegar a un nodo hoja
           //Prueba informacion_jugada
           /*set<string> personajes_restantes = informacion_jugada(nodo_actual);
           cout << "Personajes restantes:\n";

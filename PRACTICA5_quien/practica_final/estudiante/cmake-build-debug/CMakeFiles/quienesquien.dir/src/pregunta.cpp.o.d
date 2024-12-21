@@ -1,7 +1,7 @@
 CMakeFiles/quienesquien.dir/src/pregunta.cpp.o: \
- /home/maria/Carrera/Segundo/1cuatri/ED/ED_Repositorios/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/pregunta.cpp \
+ /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/pregunta.cpp \
  /usr/include/stdc-predef.h \
- /home/maria/Carrera/Segundo/1cuatri/ED/ED_Repositorios/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/../include/pregunta.h \
+ /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/../include/pregunta.h \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \

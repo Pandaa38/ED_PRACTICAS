@@ -1,5 +1,5 @@
 CMakeFiles/quienesquien.dir/src/main.cpp.o: \
- /home/maria/Carrera/Segundo/1cuatri/ED/ED_Repositorios/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/main.cpp \
+ /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/main.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/13/fstream \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -292,19 +292,19 @@ CMakeFiles/quienesquien.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h \
  /usr/include/c++/13/variant \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h \
- /home/maria/Carrera/Segundo/1cuatri/ED/ED_Repositorios/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/./include/quienesquien.h \
+ /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/./include/quienesquien.h \
  /usr/include/c++/13/cassert /usr/include/c++/13/set \
  /usr/include/c++/13/bits/stl_set.h \
  /usr/include/c++/13/bits/stl_multiset.h /usr/include/c++/13/sstream \
  /usr/include/c++/13/bits/sstream.tcc \
- /home/maria/Carrera/Segundo/1cuatri/ED/ED_Repositorios/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/./include/pregunta.h \
- /home/maria/Carrera/Segundo/1cuatri/ED/ED_Repositorios/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/./include/bintree.h \
+ /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/./include/pregunta.h \
+ /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/./include/bintree.h \
  /usr/include/c++/13/queue /usr/include/c++/13/deque \
  /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
  /usr/include/c++/13/bits/stl_queue.h \
- /home/maria/Carrera/Segundo/1cuatri/ED/ED_Repositorios/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/./include/bintree.hxx \
- /home/maria/Carrera/Segundo/1cuatri/ED/ED_Repositorios/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/./include/node.hxx \
- /home/maria/Carrera/Segundo/1cuatri/ED/ED_Repositorios/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/./include/ventana.h \
+ /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/./include/bintree.hxx \
+ /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/./include/node.hxx \
+ /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/./include/ventana.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h \
@@ -340,7 +340,7 @@ CMakeFiles/quienesquien.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontinfo.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
- /home/maria/Carrera/Segundo/1cuatri/ED/ED_Repositorios/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/./include/tablerografico.h \
+ /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/./include/tablerografico.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QPixmap \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QIcon \
@@ -383,7 +383,7 @@ CMakeFiles/quienesquien.dir/src/main.cpp.o: \
  /usr/include/c++/13/condition_variable \
  /usr/include/c++/13/bits/atomic_futex.h \
  /usr/include/c++/13/bits/std_thread.h \
- /home/maria/Carrera/Segundo/1cuatri/ED/ED_Repositorios/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/./include/consola.h \
+ /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/./include/consola.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPlainTextEdit \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qplaintextedit.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextedit.h \
