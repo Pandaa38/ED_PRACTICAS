@@ -407,61 +407,57 @@ void QuienEsQuien::escribir_arbol_completo() const{
 
 
 void QuienEsQuien::eliminar_nodos_redundantes_recursiva(bintree<Pregunta>::node nodo_actual) {
-    if (nodo_actual.null()) return; // Si el nodo es nulo, no hacemos nada
+     if (nodo_actual.null()) return; // Si el nodo es nulo, no hacemos nada
 
-    // Si tiene ambos hijos, no es redundante, seguimos recorriendo el arbol
-    if (!nodo_actual.left().null() && !nodo_actual.right().null()) {
-        eliminar_nodos_redundantes_recursiva(nodo_actual.left());
-        eliminar_nodos_redundantes_recursiva(nodo_actual.right());
-    }
+     // Si es nodo hoja
+     if (nodo_actual.left().null() && nodo_actual.right().null()) {
+          return;
+     }
 
-     bintree<Pregunta> subarbol;
-     bintree<Pregunta> rama_izq, rama_dcha;
+     // Si tiene ambos hijos, no es redundante, seguimos recorriendo el arbol
+     if (!nodo_actual.left().null() && !nodo_actual.right().null()) {
+          eliminar_nodos_redundantes_recursiva(nodo_actual.left());
+          eliminar_nodos_redundantes_recursiva(nodo_actual.right());
+          return;
+     }
+
+     bintree<Pregunta> subarbol, rama_izq, rama_dcha;
      bintree<Pregunta>::node siguiente_nodo;
 
      // Nodo con un solo hijo derecha, hemos encontrado un nodo redundante
      if (nodo_actual.left().null() && !nodo_actual.right().null()) {
           siguiente_nodo = nodo_actual.right();
-          eliminar_nodos_redundantes_recursiva(siguiente_nodo); // Continuar con el nuevo nodo
-
-          subarbol = bintree<Pregunta>(*siguiente_nodo); // Asignamos la nueva raiz del subarbol
-
-          // Conseguimos las dos ramas que cuelgan del nodo que va a sustituir el nodo que era redundante
-          arbol.prune_left(siguiente_nodo, rama_izq);
-          arbol.prune_right(siguiente_nodo, rama_dcha);
-
-          // Cosntruimos el subarbol con las ramas que hemos podado
-          subarbol.insert_left(subarbol.root(), rama_izq);
-          subarbol.insert_right(subarbol.root(), rama_dcha);
-
-          // Sustituir nodo redundante con el subárbol, que ya tiene como padre el hijo derecha
-          if (!nodo_actual.parent().null()) {
-               if (nodo_actual == nodo_actual.parent().right()) arbol.insert_right(nodo_actual.parent(), subarbol);
-               else arbol.insert_left(nodo_actual.parent(), subarbol);
-          }
      }
 
      // Nodo con un solo hijo izquierda, hemos encontrado un nodo redundante
      if (!nodo_actual.left().null() && nodo_actual.right().null()) {
           siguiente_nodo = nodo_actual.left();
-          eliminar_nodos_redundantes_recursiva(siguiente_nodo); // Continuar con el nuevo nodo
-
-          subarbol = bintree<Pregunta>(*siguiente_nodo); // Asignamos la nueva raiz del subarbol
-
-          // Conseguimos las dos ramas que cuelgan del nodo que va a sustituir el nodo que era redundante
-          arbol.prune_left(siguiente_nodo, rama_izq);
-          arbol.prune_right(siguiente_nodo, rama_dcha);
-
-          // Cosntruimos el subarbol con las ramas que hemos podado
-          subarbol.insert_left(subarbol.root(), rama_izq);
-          subarbol.insert_right(subarbol.root(), rama_dcha);
-
-          // Sustituir nodo redundante con el subárbol, que ya tiene como padre el hijo izquierda
-          if (!nodo_actual.parent().null()) {
-               if (nodo_actual == nodo_actual.parent().right()) arbol.insert_right(nodo_actual.parent(), subarbol);
-               else arbol.insert_left(nodo_actual.parent(), subarbol);
-          }
      }
+
+     // Construimos es subarbol
+     subarbol = bintree<Pregunta>(*siguiente_nodo); // Asignamos la nueva raiz del subarbol
+     if (!siguiente_nodo.left().null()) {
+          arbol.prune_left(siguiente_nodo, rama_izq);
+          subarbol.insert_left(subarbol.root(), rama_izq);  // Construimos el subarbol con la rama podada
+     }
+     if (!siguiente_nodo.right().null()) {
+          arbol.prune_right(siguiente_nodo, rama_dcha);
+          subarbol.insert_right(subarbol.root(), rama_dcha);  // Construimos el subarbol con la rama podada
+     }
+
+     // Hacemos el reemplazo de subarbol
+     bintree<Pregunta>::node padre = nodo_actual.parent();
+
+     if (nodo_actual == nodo_actual.parent().right()) {
+          arbol.insert_right(padre, subarbol);
+          nodo_actual=padre.right(); // Recuperamos el nodo actual
+     }
+     else {
+          arbol.insert_left(padre, subarbol);
+          nodo_actual=padre.left(); // Recuperamos el nodo actual
+     }
+
+     eliminar_nodos_redundantes_recursiva(nodo_actual); // Continuar con el nuevo nodo
 }
 
 void QuienEsQuien::eliminar_nodos_redundantes() {
