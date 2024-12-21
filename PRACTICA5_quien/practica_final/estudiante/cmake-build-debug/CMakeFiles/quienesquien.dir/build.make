@@ -53,10 +53,10 @@ RM = /snap/clion/310/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante
+CMAKE_SOURCE_DIR = /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug
+CMAKE_BINARY_DIR = /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/quienesquien.dir/depend.make
@@ -71,107 +71,107 @@ include CMakeFiles/quienesquien.dir/flags.make
 
 quienesquien_autogen/timestamp: /usr/lib/qt5/bin/moc
 quienesquien_autogen/timestamp: CMakeFiles/quienesquien.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target quienesquien"
-	/snap/clion/310/bin/cmake/linux/x64/bin/cmake -E cmake_autogen /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/quienesquien_autogen.dir/AutogenInfo.json Debug
-	/snap/clion/310/bin/cmake/linux/x64/bin/cmake -E touch /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target quienesquien"
+	/snap/clion/310/bin/cmake/linux/x64/bin/cmake -E cmake_autogen /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/quienesquien_autogen.dir/AutogenInfo.json Debug
+	/snap/clion/310/bin/cmake/linux/x64/bin/cmake -E touch /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen/timestamp
 
 CMakeFiles/quienesquien.dir/quienesquien_autogen/mocs_compilation.cpp.o: CMakeFiles/quienesquien.dir/flags.make
 CMakeFiles/quienesquien.dir/quienesquien_autogen/mocs_compilation.cpp.o: quienesquien_autogen/mocs_compilation.cpp
 CMakeFiles/quienesquien.dir/quienesquien_autogen/mocs_compilation.cpp.o: CMakeFiles/quienesquien.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/quienesquien.dir/quienesquien_autogen/mocs_compilation.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quienesquien.dir/quienesquien_autogen/mocs_compilation.cpp.o -MF CMakeFiles/quienesquien.dir/quienesquien_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/quienesquien.dir/quienesquien_autogen/mocs_compilation.cpp.o -c /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/quienesquien.dir/quienesquien_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quienesquien.dir/quienesquien_autogen/mocs_compilation.cpp.o -MF CMakeFiles/quienesquien.dir/quienesquien_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/quienesquien.dir/quienesquien_autogen/mocs_compilation.cpp.o -c /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen/mocs_compilation.cpp
 
 CMakeFiles/quienesquien.dir/quienesquien_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/quienesquien.dir/quienesquien_autogen/mocs_compilation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen/mocs_compilation.cpp > CMakeFiles/quienesquien.dir/quienesquien_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen/mocs_compilation.cpp > CMakeFiles/quienesquien.dir/quienesquien_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/quienesquien.dir/quienesquien_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/quienesquien.dir/quienesquien_autogen/mocs_compilation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen/mocs_compilation.cpp -o CMakeFiles/quienesquien.dir/quienesquien_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen/mocs_compilation.cpp -o CMakeFiles/quienesquien.dir/quienesquien_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/quienesquien.dir/src/consola.cpp.o: CMakeFiles/quienesquien.dir/flags.make
-CMakeFiles/quienesquien.dir/src/consola.cpp.o: /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/consola.cpp
+CMakeFiles/quienesquien.dir/src/consola.cpp.o: /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/consola.cpp
 CMakeFiles/quienesquien.dir/src/consola.cpp.o: CMakeFiles/quienesquien.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/quienesquien.dir/src/consola.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quienesquien.dir/src/consola.cpp.o -MF CMakeFiles/quienesquien.dir/src/consola.cpp.o.d -o CMakeFiles/quienesquien.dir/src/consola.cpp.o -c /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/consola.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/quienesquien.dir/src/consola.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quienesquien.dir/src/consola.cpp.o -MF CMakeFiles/quienesquien.dir/src/consola.cpp.o.d -o CMakeFiles/quienesquien.dir/src/consola.cpp.o -c /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/consola.cpp
 
 CMakeFiles/quienesquien.dir/src/consola.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/quienesquien.dir/src/consola.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/consola.cpp > CMakeFiles/quienesquien.dir/src/consola.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/consola.cpp > CMakeFiles/quienesquien.dir/src/consola.cpp.i
 
 CMakeFiles/quienesquien.dir/src/consola.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/quienesquien.dir/src/consola.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/consola.cpp -o CMakeFiles/quienesquien.dir/src/consola.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/consola.cpp -o CMakeFiles/quienesquien.dir/src/consola.cpp.s
 
 CMakeFiles/quienesquien.dir/src/main.cpp.o: CMakeFiles/quienesquien.dir/flags.make
-CMakeFiles/quienesquien.dir/src/main.cpp.o: /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/main.cpp
+CMakeFiles/quienesquien.dir/src/main.cpp.o: /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/main.cpp
 CMakeFiles/quienesquien.dir/src/main.cpp.o: CMakeFiles/quienesquien.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/quienesquien.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quienesquien.dir/src/main.cpp.o -MF CMakeFiles/quienesquien.dir/src/main.cpp.o.d -o CMakeFiles/quienesquien.dir/src/main.cpp.o -c /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/quienesquien.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quienesquien.dir/src/main.cpp.o -MF CMakeFiles/quienesquien.dir/src/main.cpp.o.d -o CMakeFiles/quienesquien.dir/src/main.cpp.o -c /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/main.cpp
 
 CMakeFiles/quienesquien.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/quienesquien.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/main.cpp > CMakeFiles/quienesquien.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/main.cpp > CMakeFiles/quienesquien.dir/src/main.cpp.i
 
 CMakeFiles/quienesquien.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/quienesquien.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/main.cpp -o CMakeFiles/quienesquien.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/main.cpp -o CMakeFiles/quienesquien.dir/src/main.cpp.s
 
 CMakeFiles/quienesquien.dir/src/pregunta.cpp.o: CMakeFiles/quienesquien.dir/flags.make
-CMakeFiles/quienesquien.dir/src/pregunta.cpp.o: /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/pregunta.cpp
+CMakeFiles/quienesquien.dir/src/pregunta.cpp.o: /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/pregunta.cpp
 CMakeFiles/quienesquien.dir/src/pregunta.cpp.o: CMakeFiles/quienesquien.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/quienesquien.dir/src/pregunta.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quienesquien.dir/src/pregunta.cpp.o -MF CMakeFiles/quienesquien.dir/src/pregunta.cpp.o.d -o CMakeFiles/quienesquien.dir/src/pregunta.cpp.o -c /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/pregunta.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/quienesquien.dir/src/pregunta.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quienesquien.dir/src/pregunta.cpp.o -MF CMakeFiles/quienesquien.dir/src/pregunta.cpp.o.d -o CMakeFiles/quienesquien.dir/src/pregunta.cpp.o -c /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/pregunta.cpp
 
 CMakeFiles/quienesquien.dir/src/pregunta.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/quienesquien.dir/src/pregunta.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/pregunta.cpp > CMakeFiles/quienesquien.dir/src/pregunta.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/pregunta.cpp > CMakeFiles/quienesquien.dir/src/pregunta.cpp.i
 
 CMakeFiles/quienesquien.dir/src/pregunta.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/quienesquien.dir/src/pregunta.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/pregunta.cpp -o CMakeFiles/quienesquien.dir/src/pregunta.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/pregunta.cpp -o CMakeFiles/quienesquien.dir/src/pregunta.cpp.s
 
 CMakeFiles/quienesquien.dir/src/quienesquien.cpp.o: CMakeFiles/quienesquien.dir/flags.make
-CMakeFiles/quienesquien.dir/src/quienesquien.cpp.o: /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/quienesquien.cpp
+CMakeFiles/quienesquien.dir/src/quienesquien.cpp.o: /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/quienesquien.cpp
 CMakeFiles/quienesquien.dir/src/quienesquien.cpp.o: CMakeFiles/quienesquien.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/quienesquien.dir/src/quienesquien.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quienesquien.dir/src/quienesquien.cpp.o -MF CMakeFiles/quienesquien.dir/src/quienesquien.cpp.o.d -o CMakeFiles/quienesquien.dir/src/quienesquien.cpp.o -c /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/quienesquien.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/quienesquien.dir/src/quienesquien.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quienesquien.dir/src/quienesquien.cpp.o -MF CMakeFiles/quienesquien.dir/src/quienesquien.cpp.o.d -o CMakeFiles/quienesquien.dir/src/quienesquien.cpp.o -c /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/quienesquien.cpp
 
 CMakeFiles/quienesquien.dir/src/quienesquien.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/quienesquien.dir/src/quienesquien.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/quienesquien.cpp > CMakeFiles/quienesquien.dir/src/quienesquien.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/quienesquien.cpp > CMakeFiles/quienesquien.dir/src/quienesquien.cpp.i
 
 CMakeFiles/quienesquien.dir/src/quienesquien.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/quienesquien.dir/src/quienesquien.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/quienesquien.cpp -o CMakeFiles/quienesquien.dir/src/quienesquien.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/quienesquien.cpp -o CMakeFiles/quienesquien.dir/src/quienesquien.cpp.s
 
 CMakeFiles/quienesquien.dir/src/tablerografico.cpp.o: CMakeFiles/quienesquien.dir/flags.make
-CMakeFiles/quienesquien.dir/src/tablerografico.cpp.o: /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/tablerografico.cpp
+CMakeFiles/quienesquien.dir/src/tablerografico.cpp.o: /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/tablerografico.cpp
 CMakeFiles/quienesquien.dir/src/tablerografico.cpp.o: CMakeFiles/quienesquien.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/quienesquien.dir/src/tablerografico.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quienesquien.dir/src/tablerografico.cpp.o -MF CMakeFiles/quienesquien.dir/src/tablerografico.cpp.o.d -o CMakeFiles/quienesquien.dir/src/tablerografico.cpp.o -c /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/tablerografico.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/quienesquien.dir/src/tablerografico.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quienesquien.dir/src/tablerografico.cpp.o -MF CMakeFiles/quienesquien.dir/src/tablerografico.cpp.o.d -o CMakeFiles/quienesquien.dir/src/tablerografico.cpp.o -c /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/tablerografico.cpp
 
 CMakeFiles/quienesquien.dir/src/tablerografico.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/quienesquien.dir/src/tablerografico.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/tablerografico.cpp > CMakeFiles/quienesquien.dir/src/tablerografico.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/tablerografico.cpp > CMakeFiles/quienesquien.dir/src/tablerografico.cpp.i
 
 CMakeFiles/quienesquien.dir/src/tablerografico.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/quienesquien.dir/src/tablerografico.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/tablerografico.cpp -o CMakeFiles/quienesquien.dir/src/tablerografico.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/tablerografico.cpp -o CMakeFiles/quienesquien.dir/src/tablerografico.cpp.s
 
 CMakeFiles/quienesquien.dir/src/ventana.cpp.o: CMakeFiles/quienesquien.dir/flags.make
-CMakeFiles/quienesquien.dir/src/ventana.cpp.o: /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/ventana.cpp
+CMakeFiles/quienesquien.dir/src/ventana.cpp.o: /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/ventana.cpp
 CMakeFiles/quienesquien.dir/src/ventana.cpp.o: CMakeFiles/quienesquien.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/quienesquien.dir/src/ventana.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quienesquien.dir/src/ventana.cpp.o -MF CMakeFiles/quienesquien.dir/src/ventana.cpp.o.d -o CMakeFiles/quienesquien.dir/src/ventana.cpp.o -c /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/ventana.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/quienesquien.dir/src/ventana.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/quienesquien.dir/src/ventana.cpp.o -MF CMakeFiles/quienesquien.dir/src/ventana.cpp.o.d -o CMakeFiles/quienesquien.dir/src/ventana.cpp.o -c /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/ventana.cpp
 
 CMakeFiles/quienesquien.dir/src/ventana.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/quienesquien.dir/src/ventana.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/ventana.cpp > CMakeFiles/quienesquien.dir/src/ventana.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/ventana.cpp > CMakeFiles/quienesquien.dir/src/ventana.cpp.i
 
 CMakeFiles/quienesquien.dir/src/ventana.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/quienesquien.dir/src/ventana.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/ventana.cpp -o CMakeFiles/quienesquien.dir/src/ventana.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/src/ventana.cpp -o CMakeFiles/quienesquien.dir/src/ventana.cpp.s
 
 # Object files for target quienesquien
 quienesquien_OBJECTS = \
@@ -198,7 +198,7 @@ bin/quienesquien: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
 bin/quienesquien: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13
 bin/quienesquien: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
 bin/quienesquien: CMakeFiles/quienesquien.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable bin/quienesquien"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable bin/quienesquien"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/quienesquien.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -210,6 +210,6 @@ CMakeFiles/quienesquien.dir/clean:
 .PHONY : CMakeFiles/quienesquien.dir/clean
 
 CMakeFiles/quienesquien.dir/depend: quienesquien_autogen/timestamp
-	cd /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/quienesquien.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/quienesquien.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/quienesquien.dir/depend
 

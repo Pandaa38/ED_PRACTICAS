@@ -53,10 +53,10 @@ RM = /snap/clion/310/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante
+CMAKE_SOURCE_DIR = /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug
+CMAKE_BINARY_DIR = /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug
 
 # Utility rule file for quienesquien_autogen.
 
@@ -70,9 +70,9 @@ CMakeFiles/quienesquien_autogen: quienesquien_autogen/timestamp
 
 quienesquien_autogen/timestamp: /usr/lib/qt5/bin/moc
 quienesquien_autogen/timestamp: CMakeFiles/quienesquien_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target quienesquien"
-	/snap/clion/310/bin/cmake/linux/x64/bin/cmake -E cmake_autogen /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/quienesquien_autogen.dir/AutogenInfo.json Debug
-	/snap/clion/310/bin/cmake/linux/x64/bin/cmake -E touch /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target quienesquien"
+	/snap/clion/310/bin/cmake/linux/x64/bin/cmake -E cmake_autogen /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/quienesquien_autogen.dir/AutogenInfo.json Debug
+	/snap/clion/310/bin/cmake/linux/x64/bin/cmake -E touch /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/quienesquien_autogen/timestamp
 
 quienesquien_autogen: CMakeFiles/quienesquien_autogen
 quienesquien_autogen: quienesquien_autogen/timestamp
@@ -88,6 +88,6 @@ CMakeFiles/quienesquien_autogen.dir/clean:
 .PHONY : CMakeFiles/quienesquien_autogen.dir/clean
 
 CMakeFiles/quienesquien_autogen.dir/depend:
-	cd /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/quienesquien_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/CMakeFiles/quienesquien_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/quienesquien_autogen.dir/depend
 

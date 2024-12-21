@@ -1,6 +1,6 @@
 PROJECT_NAME           = "QuienesQuien"
-OUTPUT_DIRECTORY       = /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/doc_doxygen/
-INPUT                  = /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/.//include /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/.//src /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/.//doc
+OUTPUT_DIRECTORY       = /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/cmake-build-debug/doc_doxygen/
+INPUT                  = /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/.//include /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/.//src /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/.//doc
 GENERATE_LATEX         = NO
-IMAGE_PATH             = /home/juan/Documentos/INFORMATICA/SEGUNDO/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/.//doc
+IMAGE_PATH             = /home/maria/Carrera/Segundo/1cuatri/ED/ED_PRACTICAS/PRACTICA5_quien/practica_final/estudiante/.//doc
 EXTRACT_PRIVATE        = NO

@@ -237,14 +237,14 @@ public:
 	  * @brief Este metodo permite calcular la profundidad de todas las hojas del arbol.
 	  *
 	  * @param profundidad profundidad que tiene hasta el momento
-	  * @param nivel_actual nodo actual en el que nos encontramos
+	  * @param nodo_actual nodo actual en el que nos encontramos
 	  * @param prof_hojas referencia a un vector de tipo int donde en cada posición se recoge la profundidad
 	  *        de una hoja distinta del arbol
 	  * @return void
 	  *
 	  * @pre El arbol de preguntas debe haber sido construido previamente.
 	  */
-	void profundidad_hojas(int profundidad, bintree<Pregunta>::node nivel_actual, vector<int>& prof_hojas);
+	void profundidad_hojas(int profundidad, bintree<Pregunta>::node nodo_actual, vector<int>& prof_hojas);
 
 
 	/**
