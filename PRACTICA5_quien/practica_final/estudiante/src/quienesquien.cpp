@@ -80,8 +80,6 @@ void QuienEsQuien::mostrar_estructuras_leidas(){
   *
   * @return Copia de la cadena original sin las subcadenas no deseadas.
   */
-
-
 string limpiar_string(string cadena_original,string cadena_a_eliminar){
      string linea(cadena_original);
      while(linea.find_first_of(cadena_a_eliminar) != std::string::npos){
@@ -184,7 +182,7 @@ ostream& operator << (ostream& os, const QuienEsQuien &quienEsQuien){
      }
 
      os << "Nombre personaje" << endl;
-     
+
      //Rellenamos con ceros y unos cada linea y al final ponemos el nombre del personaje.
      for(int indice_personaje=0;indice_personaje<quienEsQuien.personajes.size();indice_personaje++){
           for(int indice_atributo=0;indice_atributo<quienEsQuien.atributos.size();indice_atributo++){
@@ -192,7 +190,7 @@ ostream& operator << (ostream& os, const QuienEsQuien &quienEsQuien){
           }
           os << quienEsQuien.personajes[indice_personaje] << endl;
      }
-     
+
      return os;
 }
 
@@ -299,13 +297,15 @@ bintree<Pregunta> QuienEsQuien::crear_arbol(){
 void QuienEsQuien::usar_arbol(bintree<Pregunta> arbol_nuevo){
      arbol = arbol_nuevo;
 }
+
 void QuienEsQuien::iniciar_juego(){
      Ventana v(tg,con,"WisW");
      if (modo_graph){
           v.show();
      }
 
-     // Prueba de aniade_personaje
+
+     //Prueba de aniade_personaje
      /*string nombre="prueba";
      vector<bool> caracteristicas={1, 0, 1,1}; //Es mujer, no tiene ojos marrones, si tiene gafas(para distinguirlo de Ana)
      string nombre_imagen_personaje = "prueba_aniade";
@@ -356,6 +356,7 @@ void QuienEsQuien::iniciar_juego(){
      }
      v.cerrar();
 }
+
 set<string> QuienEsQuien::informacion_jugada(bintree<Pregunta>::node jugada_actual) {
      if (jugada_actual.null()) return {}; // Es un nodo nulo devolvemos el conjunto vacío
 
@@ -395,7 +396,8 @@ void QuienEsQuien::escribir_arbol_completo() const{
      escribir_esquema_arbol(cout,this->arbol,this->arbol.root(),pre);
 }
 
-QuienEsQuien::eliminar_nodos_redundantes_recursiva(bintree<Pregunta>::node nodo_actual) {
+
+void QuienEsQuien::eliminar_nodos_redundantes_recursiva(bintree<Pregunta>::node nodo_actual) {
      if (nodo_actual.null()) return; // Si el nodo es nulo, no hacemos nada
 
      if (nodo_actual.left().null() && nodo_actual.right().null()) return; // Si es nodo hoja(personaje), no hacemos nada
@@ -443,29 +445,29 @@ QuienEsQuien::eliminar_nodos_redundantes_recursiva(bintree<Pregunta>::node nodo_
      eliminar_nodos_redundantes_recursiva(nodo_actual); // Continuar con el nuevo nodo
 }
 
-
 void QuienEsQuien::eliminar_nodos_redundantes() {
      // Llamamos a la función recursiva para empezar desde la raíz del árbol
      eliminar_nodos_redundantes_recursiva(arbol.root());
 }
 
-void QuienEsQuien::profundidad_hojas(int profundidad, bintree<Pregunta>::node nodo_actual, vector<int>& prof_hojas) {
-     if (nodo_actual.null()) return; //Si el nodo es nulo, terminamos
 
-     if (nodo_actual.left().null() && nodo_actual.right().null()) // Si es un nodo hoja
+void QuienEsQuien::profundidad_hojas(int profundidad, bintree<Pregunta>::node nivel_actual, vector<int>& prof_hojas) {
+     if (nivel_actual.null()) return; //Si el nodo es nulo, terminamos
+
+     if (nivel_actual.left().null() && nivel_actual.right().null()) // Si es un nodo hoja
           prof_hojas.push_back(profundidad);
 
      // Seguimos recorriendo las ramas, incrementando la profundidad
-     profundidad_hojas(profundidad+1, nodo_actual.left(), prof_hojas);
-     profundidad_hojas(profundidad+1, nodo_actual.right(), prof_hojas);
+     profundidad_hojas(profundidad+1, nivel_actual.left(), prof_hojas);
+     profundidad_hojas(profundidad+1, nivel_actual.right(), prof_hojas);
 }
 
 float QuienEsQuien::profundidad_promedio_hojas() {
-     bintree<Pregunta>::node nodo_actual = arbol.root();
+     bintree<Pregunta>::node nivel_actual = arbol.root();
      vector<int> prof_hojas;
 
      // Comenzamos desde la raiz y con una profundidad=0;
-     profundidad_hojas(0, nodo_actual, prof_hojas);
+     profundidad_hojas(0, nivel_actual, prof_hojas);
 
      if (prof_hojas.empty()) return 0.0;     // Si no hay hojas en el árbol, retornamos 0
 
@@ -518,6 +520,7 @@ void QuienEsQuien::tablero_aleatorio(int numero_de_personajes){
           tablero.erase(tablero.begin()+personaje_a_eliminar);
      }
 }
+
 void QuienEsQuien::ocultar_personajes_graph(const set<string> &personajes_activos){
     //ocultamos los personajes
     int idx=0;
@@ -553,7 +556,6 @@ void QuienEsQuien::preguntas_formuladas (bintree<Pregunta>::node jugada) {
           cout <<"\tpero aún no sé cuál es." << endl<< endl;
      }
 }
-
 void QuienEsQuien:: aniade_personaje (string nombre, vector<bool> caracteristicas, string nombre_imagen_personaje) {
      bintree<Pregunta>::node nodo_actual=arbol.root(); // Empezamos recorriendo el arbol por la raiz
 
@@ -691,14 +693,13 @@ void QuienEsQuien::MejorPregunta(const vector<bool>& personajes_restantes, int i
      int num_personajes_vivos = count(personajes_restantes.begin(), personajes_restantes.end(), true);
 
      int contador = 0; // Contabiliza los trues del tablero dada una pregunta teniendo en cuenta solo los personajes vivos
-     int pos_mejor_atributo;  // Posicion ocupada por el mejor atributo por el que preguntar
+     int pos_mejor_atributo=-1;  // Posicion ocupada por el mejor atributo por el que preguntar
 
      int pos_atributo = indice_atributo;   // Controlamos no repetir preguntas
      bool mejor_pregunta_encontrada = false;
 
-     int i = 0;     // Variabel que nos ayuda a calcular mejor_pregunta_encontrada
+     int i = 0;     // Variable que nos ayuda a calcular mejor_pregunta_encontrada
      while (pos_atributo < atributos.size() && !mejor_pregunta_encontrada) {
-          cout << atributos[pos_atributo]<<endl;
           for (int j=0; j < personajes.size(); j++)  // Mientras que el personaje siga vivo y tablero sea true
                if (personajes_restantes[j] && tablero[j][pos_atributo]) contador++;
 
@@ -716,9 +717,8 @@ void QuienEsQuien::MejorPregunta(const vector<bool>& personajes_restantes, int i
                contador = 0;  // Actualizo contador para la siguiente iteración
           }
      }
-
+     if (pos_mejor_atributo == -1) return;     // Si no se encontro mejor_atributo no hacer nada
      string mejor_atributo = atributos[pos_mejor_atributo]; // Mejor atributo por el que preguntar
-     if (mejor_atributo.empty()) return;     // Si no se encontro mejor_atributo no hacer nada
 
      // Como solución modificamos el orden de atributos de manera que el mejor atributo, ocupe la posicon siguiente en
      // el vector a la pregunta realizada con anteorioridad. Por consecuente tambien se modifican las filas del tablero
