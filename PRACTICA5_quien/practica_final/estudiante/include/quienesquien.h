@@ -292,7 +292,6 @@ public:
 	************************************************************************************************************
 	**/
 
-	// Podemos plantearlo como una función que devuleve un flujo de salida
 	/**
 	* @brief Este método se aplica sobre un nodo del árbol de preguntas (jugada) para obtener una
 	* descripción de las preguntas formuladas anteriormente y las respuestas dadas por el usuario
@@ -363,7 +362,7 @@ private:
 	*  tengán el numero de 0 (false) y 1(true) mas equiparado. Esto ocurre cuando el numero de true o de false
 	*  es igual a num_personajes_vivos/2.
 	*
-	* @param personajes_restantes vector booleano que nos indica que personaje sigue vivo en la rama
+	* @param personajes_restantes vector booleano que nos indica qué personajes siguen vivos en la rama
 	* @param indice_atributo posicion del vector de atributos, marca el inicio del vector a partir del cuál
 	*        hay preguntas que no se han realizado.
 	*
